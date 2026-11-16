@@ -1,4 +1,3 @@
+# MAQUETTE — indexation désactivée. En production : Allow: / + Sitemap.
 User-agent: *
-Allow: /
-
-Sitemap: https://pranabibi.com/sitemap.xml
+Disallow: /

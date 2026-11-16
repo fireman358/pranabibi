@@ -2,179 +2,283 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PranaBibi — Institut de Beauté &amp; Massages | Arquennes</title>
-  <meta name="description" content="PranaBibi, institut de beauté & massages à Arquennes (7181). Massages ayurvédique et harmonisant, épilations douces, extensions de cils UV & LED. Infirmière diplômée d'État & esthéticienne diplômée. 0493 82 83 31.">
-  <meta property="og:title" content="PranaBibi — Institut de Beauté & Massages">
-  <meta property="og:description" content="Massages, épilations douces et extensions de cils à Arquennes. Au plaisir de prendre soin de vous. Pranament vôtre…">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PranaBibi — Institut de beauté &amp; massages à Arquennes (Seneffe)</title>
+  <meta name="description" content="Institut de beauté &amp; massages à Arquennes (Seneffe) : massages, épilations douces et extensions de cils. Infirmière et esthéticienne diplômée. 0493 82 83 31.">
+  <link rel="canonical" href="/">
+  <meta name="theme-color" content="#2A0A06">
+
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://pranabibi.com/">
-  <meta property="og:image" content="https://pranabibi.com/img/og-image.jpg">
-  <link rel="icon" type="image/svg+xml" href="/brand/favicon.svg">
+  <meta property="og:site_name" content="PranaBibi">
+  <meta property="og:locale" content="fr_BE">
+  <meta property="og:title" content="PranaBibi — Institut de beauté &amp; massages à Arquennes (Seneffe)">
+  <meta property="og:description" content="Massages, épilations douces et extensions de cils à Arquennes. Au plaisir de prendre soin de vous. Pranament vôtre…">
+  <meta property="og:url" content="/">
+  <meta property="og:image" content="/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PranaBibi — Institut de beauté &amp; massages">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PranaBibi — Institut de beauté &amp; massages à Arquennes (Seneffe)">
+  <meta name="twitter:description" content="Massages, épilations douces et extensions de cils à Arquennes.">
+  <meta name="twitter:image" content="/img/og-image.jpg">
+
   <link rel="icon" type="image/png" sizes="32x32" href="/brand/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/brand/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/brand/apple-touch-icon.png">
+
+  <link rel="preload" href="/fonts/pinyon.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/cormorant.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/jost.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/style.css">
+  <script>
+    document.documentElement.classList.add('js');
+    window.setTimeout(function () {
+      document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
+    }, 3000);
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "@id": "#institut",
+    "name": "PranaBibi",
+    "description": "Institut de beauté et massages à Arquennes (Seneffe) : massages ayurvédique et harmonisant, épilations douces, extensions de cils.",
+    "url": "/",
+    "telephone": "+32493828331",
+    "image": ["/img/og-image.jpg", "/img/portrait.jpg"],
+    "logo": "/brand/seal.jpg",
+    "priceRange": "€€",
+    "currenciesAccepted": "EUR",
+    "slogan": "Au plaisir de prendre soin de vous.",
+    "foundingDate": "2024-06-01",
+    "founder": { "@type": "Person", "name": "Bibi Ahamadi" },
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=45+Rue+des+Carri%C3%A8res,+7181+Arquennes,+Belgique",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "45 Rue des Carrières",
+      "postalCode": "7181",
+      "addressLocality": "Arquennes",
+      "addressRegion": "Hainaut",
+      "addressCountry": "BE"
+    },
+    "areaServed": ["Arquennes", "Seneffe", "Hainaut"],
+    "sameAs": [
+      "https://www.facebook.com/PranaBibi",
+      "https://www.instagram.com/pranabibi"
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday", "Sunday"],
+        "opens": "10:00",
+        "closes": "20:00"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
-<header>
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<header class="site-header">
   <div class="wrap">
     <a class="brand" href="/">
-      <img src="/brand/lotus.svg" alt="Logo lotus PranaBibi">
+      <img src="/brand/seal.jpg" alt="" width="48" height="48" decoding="async">
       <span class="wordmark">PranaBibi</span>
     </a>
-    <nav>
-      <ul>
+    <nav aria-label="Navigation principale">
+      <ul id="primary-nav">
+        <li><a href="/#savoir-faire">L'institut</a></li>
         <li><a href="/#soins">Les soins</a></li>
-        <li><a href="/tarifs.html">Tarifs</a></li>
+        <li><a href="/tarifs">Tarifs</a></li>
         <li><a href="/#contact">Contact</a></li>
         <li><a class="cta" href="tel:+32493828331">0493 82 83 31</a></li>
       </ul>
     </nav>
-    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
-<section class="hero">
-  <img class="lotus-bg" src="/brand/lotus.svg" alt="" aria-hidden="true">
-  <div class="hero-inner">
-    <img class="lotus" src="/brand/lotus.svg" alt="Lotus doré PranaBibi">
-    <h1>PranaBibi</h1>
-    <p class="baseline">Institut de Beauté &amp; Massages</p>
-    <p class="accroche">« Au plaisir de prendre soin de vous. Pranament vôtre… »</p>
-    <div class="actions">
-      <a class="btn solid" href="/tarifs.html">Découvrir les soins &amp; tarifs</a>
-      <a class="btn" href="tel:+32493828331">Prendre rendez-vous</a>
-    </div>
-  </div>
-</section>
+<main id="main">
 
-<section id="savoir-faire" class="section-dark">
+  <section class="hero">
+    <div class="hero-frame" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <img class="seal-lg" src="/brand/seal.jpg" alt="Sceau PranaBibi" width="150" height="150" fetchpriority="high" decoding="async">
+      <h1>
+        <span class="wordmark-lg" aria-hidden="true">PranaBibi</span>
+        <span class="sr-only">Institut de beauté et massages à Arquennes (Seneffe)</span>
+      </h1>
+      <p class="baseline">Institut de Beauté &amp; Massages</p>
+      <p class="accroche">Au plaisir de prendre soin de vous.<br>Pranament vôtre…</p>
+      <div class="actions">
+        <a class="btn solid" href="/tarifs">Découvrir les soins &amp; tarifs</a>
+        <a class="btn" href="tel:+32493828331">Prendre rendez-vous</a>
+      </div>
+      <p class="hero-note">Arquennes (Seneffe) · Sur rendez-vous</p>
+    </div>
+  </section>
+
+  <section id="savoir-faire" class="section section-parchment">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Savoir-faire &amp; confiance</p>
+        <h2>Deux expertises, une même exigence</h2>
+        <div class="divider"><img src="/brand/seal.jpg" alt="" width="30" height="30" loading="lazy" decoding="async"></div>
+        <p class="lead">Infirmière et esthéticienne diplômée : le soin abordé avec rigueur, douceur et écoute.</p>
+      </div>
+      <div class="sf-grid">
+        <article class="sf-card reveal">
+          <p class="num">01</p>
+          <h3>Infirmière diplômée d'État</h3>
+          <p>Spécialisation soins intensifs &amp; urgences — un regard clinique, une gestuelle sûre et hygiénique.</p>
+        </article>
+        <article class="sf-card reveal">
+          <p class="num">02</p>
+          <h3>Esthéticienne diplômée</h3>
+          <p>Des soins de beauté pensés pour révéler votre éclat naturel, dans le respect de votre peau.</p>
+        </article>
+      </div>
+      <p class="sf-note reveal">Massages, épilations et soins du regard, pour les femmes et les hommes — en institut ou à domicile selon la zone.</p>
+    </div>
+  </section>
+
+  <section id="soins" class="section section-bordeaux">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Nos prestations</p>
+        <h2>Les soins</h2>
+        <div class="divider"><img src="/brand/seal.jpg" alt="" width="30" height="30" loading="lazy" decoding="async"></div>
+      </div>
+      <div class="soins-grid">
+        <article class="soin-card reveal">
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 32 32"><path d="M16 26c-3.2-2.1-5-5-5-8 0-2.5 1.7-4.9 5-7 3.3 2.1 5 4.5 5 7 0 3-1.8 5.9-5 8Z"/><path d="M16 26c-5.4 0-9.8-2.4-11.8-5.6 3.2-.4 6 .5 8.3 2.4M16 26c5.4 0 9.8-2.4 11.8-5.6-3.2-.4-6 .5-8.3 2.4"/><path d="M16 11c1.6 1.3 2.5 2.8 2.5 4.5"/></svg>
+          </div>
+          <h3>Massages</h3>
+          <p class="sous">Relaxation &amp; ayurvéda</p>
+          <ul>
+            <li>Soins ciblés express — 30 min</li>
+            <li>Massage harmonisant — 1 h 00</li>
+            <li>Massage ayurvédique — 1 h 15</li>
+          </ul>
+          <a class="more" href="/massages">Découvrir les massages</a>
+        </article>
+        <article class="soin-card reveal">
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 32 32"><path d="M9 13h14v8a4 4 0 0 1-4 4h-6a4 4 0 0 1-4-4v-8Z"/><path d="M7 13h18"/><path d="M16 4c2.2 2.8 3.3 4.6 3.3 6a3.3 3.3 0 0 1-6.6 0c0-1.4 1.1-3.2 3.3-6Z"/><path d="M12 17h8"/></svg>
+          </div>
+          <h3>Épilations</h3>
+          <p class="sous">Douces &amp; respectueuses</p>
+          <ul>
+            <li>Cire sans colophane</li>
+            <li>Visage, corps &amp; membres</li>
+            <li>Zones sensibles &amp; maillot</li>
+            <li>Épilation homme</li>
+          </ul>
+          <a class="more" href="/epilations">Découvrir les épilations</a>
+        </article>
+        <article class="soin-card reveal">
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 32 32"><path d="M3 16s4.8-7 13-7 13 7 13 7-4.8 7-13 7S3 16 3 16Z"/><circle cx="16" cy="16" r="3.4"/><path d="M7 6l2 3M12 3.5l1 3.4M20 3.5l-1 3.4M25 6l-2 3"/></svg>
+          </div>
+          <h3>Extensions de cils</h3>
+          <p class="sous">UV &amp; LED — tenue maximale</p>
+          <ul>
+            <li>Cil à cil — effet naturel</li>
+            <li>Volume russe — effet intense</li>
+            <li>Méga volume — effet glamour</li>
+            <li>Séchage immédiat</li>
+          </ul>
+          <a class="more" href="/extensions-de-cils">Découvrir les extensions de cils</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="offre">
+    <div class="wrap offre-inner reveal">
+      <p class="offre-badge">-20&nbsp;%</p>
+      <div>
+        <h2>Offre de lancement</h2>
+        <p>Profitez de <strong>-20&nbsp;% sur l'ensemble de nos soins jusqu'au 31 janvier 2027</strong>. Offre valable une fois par prestation et par personne (ex.&nbsp;: cumulable une fois sur un massage, une fois sur un soin du regard et une fois sur un rendez-vous épilation).</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="institut" class="section section-parchment about">
+    <div class="wrap about-grid">
+      <figure class="reveal">
+        <img class="about-portrait" src="/img/portrait.jpg" alt="Portrait de Bibi Ahamadi, fondatrice de PranaBibi" width="700" height="1071" loading="lazy" decoding="async">
+        <figcaption>Photo&nbsp;: Phil.G_Photography</figcaption>
+      </figure>
+      <div class="reveal">
+        <p class="eyebrow">L'institut</p>
+        <h2>Le soin, avec précision et douceur</h2>
+        <p>Mon parcours prend sa source dans le milieu hospitalier : infirmière en soins intensifs et aux urgences, j'y ai appris la rigueur, l'écoute et le respect de la physiologie humaine.</p>
+        <p>Formée au massage ayurvédique au centre Prana d'Ittre, j'ai créé PranaBibi à Arquennes pour faire voyager vos sens et relancer votre Prana — le souffle de vie, essentiel à votre vitalité.</p>
+        <p class="signature">Pranament vôtre…</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section section-espresso">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Contact &amp; informations pratiques</p>
+        <h2>Prendre rendez-vous</h2>
+        <div class="divider"><img src="/brand/seal.jpg" alt="" width="30" height="30" loading="lazy" decoding="async"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <p class="label">Téléphone</p>
+          <a href="tel:+32493828331">0493 82 83 31</a>
+        </div>
+        <div class="contact-card reveal">
+          <p class="label">Adresse</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=45+Rue+des+Carri%C3%A8res,+7181+Arquennes,+Belgique" target="_blank" rel="noopener">45 Rue des Carrières<br>7181 Arquennes (Seneffe)<small>Itinéraire Google Maps</small></a>
+        </div>
+        <div class="contact-card reveal">
+          <p class="label">Horaires</p>
+          <p class="val">Lun–Ven 9h–19h<br>Sam &amp; Dim 10h–20h<small>Uniquement sur rendez-vous</small></p>
+        </div>
+      </div>
+      <div class="contact-socials reveal">
+        <a href="https://instagram.com/pranabibi" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://facebook.com/PranaBibi" target="_blank" rel="noopener">Facebook</a>
+      </div>
+      <p class="contact-note reveal">« Déplacement possible selon zone (frais applicables) »</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="kicker">Savoir-faire &amp; confiance</p>
-      <h2>Une expertise double, au service de votre bien-être</h2>
-      <div class="divider"><img src="/brand/lotus.svg" alt=""></div>
-      <p class="lead">Expertise d'infirmière et d'esthéticienne, pour des soins réalisés avec rigueur, douceur et écoute.</p>
-    </div>
-    <div class="sf-grid">
-      <div class="sf-card reveal">
-        <img class="lotus-ico" src="/brand/lotus.svg" alt="">
-        <h3>Infirmière diplômée d'État</h3>
-        <p>Spécialisation soins intensifs &amp; urgences — un regard clinique, une gestuelle sûre et hygiénique.</p>
-      </div>
-      <div class="sf-card reveal">
-        <img class="lotus-ico" src="/brand/lotus.svg" alt="">
-        <h3>Esthéticienne diplômée</h3>
-        <p>Des soins de beauté pensés pour révéler votre éclat naturel, dans le respect de votre peau.</p>
-      </div>
-      <div class="sf-card reveal">
-        <img class="lotus-ico" src="/brand/lotus.svg" alt="">
-        <h3>Pour hommes et femmes</h3>
-        <p>Massages, épilations et soins du regard : chaque prestation s'adapte à vous, en institut ou à domicile selon zone.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="soins" class="section-beige">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="kicker">Nos prestations</p>
-      <h2>Les soins</h2>
-      <div class="divider"><img src="/brand/lotus.svg" alt=""></div>
-    </div>
-    <div class="soins-grid">
-      <article class="soin-card reveal">
-        <div class="ico"><img src="/brand/lotus.svg" alt=""></div>
-        <h3>Massages</h3>
-        <p class="sous">Relaxation &amp; ayurvéda</p>
-        <ul>
-          <li>Massages ciblés express (30 min)</li>
-          <li>Massage harmonisant (1h)</li>
-          <li>Massage ayurvédique (1h15)</li>
-          <li>Pour hommes et femmes</li>
-        </ul>
-        <a class="more" href="/tarifs.html#massages">Voir les tarifs</a>
-      </article>
-      <article class="soin-card reveal">
-        <div class="ico"><img src="/brand/lotus.svg" alt=""></div>
-        <h3>Épilations</h3>
-        <p class="sous">Douces &amp; respectueuses</p>
-        <ul>
-          <li>Cire sans colophane</li>
-          <li>Visage, corps &amp; membres</li>
-          <li>Zones sensibles &amp; maillot</li>
-          <li>Épilation homme — pour hommes et femmes</li>
-        </ul>
-        <a class="more" href="/tarifs.html#epilations">Voir les tarifs</a>
-      </article>
-      <article class="soin-card reveal">
-        <div class="ico"><img src="/brand/lotus.svg" alt=""></div>
-        <h3>Extensions de cils</h3>
-        <p class="sous">Colle UV &amp; LED — tenue maximale</p>
-        <ul>
-          <li>Cil à cil — effet naturel</li>
-          <li>Volume russe — effet intense</li>
-          <li>Méga volume — effet glamour</li>
-          <li>Teinture longue durée</li>
-        </ul>
-        <a class="more" href="/tarifs.html#cils">Voir les tarifs</a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="offre">
-  <div class="wrap reveal">
-    <p class="badge">-20%</p>
-    <h2>Offre de lancement exclusive</h2>
-    <p>Profitez de <strong>-20% sur l'ensemble de nos soins jusqu'au 31 janvier 2027</strong>.<br>
-    Offre valable une fois par prestation et par personne (cumulable une fois sur un massage, une fois sur un soin du regard et une fois sur un rendez-vous épilation).</p>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="kicker">Contact &amp; informations pratiques</p>
-      <h2>Prendre rendez-vous</h2>
-      <div class="divider"><img src="/brand/lotus.svg" alt=""></div>
-    </div>
-    <div class="contact-grid">
-      <div class="contact-card reveal">
-        <p class="label">Téléphone</p>
-        <a href="tel:+32493828331">0493 82 83 31</a>
-      </div>
-      <div class="contact-card reveal">
-        <p class="label">Adresse</p>
-        <p class="val">45 rue des Carrières<br>7181 Arquennes</p>
-      </div>
-      <div class="contact-card reveal">
-        <p class="label">Instagram</p>
-        <a href="https://instagram.com/pranabibi" target="_blank" rel="noopener">@pranabibi</a>
-      </div>
-      <div class="contact-card reveal">
-        <p class="label">Facebook</p>
-        <a href="https://facebook.com/PranaBibi" target="_blank" rel="noopener">facebook.com/PranaBibi</a>
-      </div>
-    </div>
-    <p class="contact-note reveal">« Déplacement possible selon zone (frais applicables) »</p>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <img class="lotus" src="/brand/lotus.svg" alt="">
+    <img class="seal" src="/brand/seal.jpg" alt="" width="54" height="54" loading="lazy" decoding="async">
     <p class="wordmark">PranaBibi</p>
     <p class="tag">Institut de Beauté &amp; Massages</p>
-    <div class="socials">
-      <a href="https://instagram.com/pranabibi" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://facebook.com/PranaBibi" target="_blank" rel="noopener">Facebook</a>
-      <a href="tel:+32493828331">0493 82 83 31</a>
-    </div>
-    <p class="small">© <span id="year">2026</span> PranaBibi — 45 rue des Carrières, 7181 Arquennes — TVA BE071 94 29 303 — <a href="/mentions-legales.html">Mentions légales</a></p>
+    <nav class="footer-nav" aria-label="Liens de pied de page">
+      <a href="/#savoir-faire">L'institut</a>
+      <a href="/massages">Massages</a>
+      <a href="/epilations">Épilations</a>
+      <a href="/extensions-de-cils">Extensions de cils</a>
+      <a href="/faq">FAQ</a>
+      <a href="/tarifs">Tarifs</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <p class="small">© <span id="year">2026</span> PranaBibi — Bibi Ahamadi — 45 Rue des Carrières, 7181 Arquennes (Seneffe) — TVA BE 0719.429.303<br><a href="/mentions-legales">Mentions légales</a></p>
   </div>
 </footer>
 

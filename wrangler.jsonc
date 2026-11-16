@@ -3,6 +3,12 @@
   "name": "pranabibi",
   "compatibility_date": "2026-11-16",
   "assets": {
-    "directory": "./public"
+    "directory": "./public",
+    "not_found_handling": "404-page"
   }
+
+  // MAQUETTE : aucun domaine custom, déploiement sur *.workers.dev
+  // ou sur le domaine de la maquette via le dashboard Cloudflare.
+  // En production sur pranabibi.com, ajouter :
+  // "routes": [{ "pattern": "pranabibi.com", "custom_domain": true }]
 }

@@ -1,0 +1,28 @@
+# Anciennes URLs du site Wix → nouveau site (301)
+# URLs canoniques du nouveau site : sans extension.
+# Règles spécifiques d'abord, dynamiques ensuite.
+
+/index.html                       /                     301
+/home                             /                     301
+/tarifs.html                      /tarifs               301
+/mentions-legales.html            /mentions-legales     301
+/contact                          /#contact             301
+/book-online                      /#contact             301
+/about                            /#savoir-faire        301
+/services                         /#soins               301
+/blog                             /                     301
+/event-list                       /                     301
+/pricing-plans/formules-et-tarifs /tarifs               301
+
+/service-page/massage-*           /massages             301
+/service-page/epilation-*         /epilations           301
+/service-page/escale-*            /tarifs#forfaits      301
+/service-page/total-body-*        /tarifs#forfaits      301
+
+/blog/*                           /                     301
+/post/*                           /                     301
+/event-list/*                     /                     301
+/d-tails-de-l-v-nement/*          /                     301
+/page-d-article/*                 /                     301
+/pricing-plans/*                  /tarifs               301
+/service-page/*                   /tarifs               301

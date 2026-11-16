@@ -1,32 +1,64 @@
-const header = document.querySelector('header');
-const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
-window.addEventListener('scroll', onScroll, { passive: true });
-onScroll();
+/* PranaBibi — interactions légères (menu, révélation, année) */
+(function () {
+  'use strict';
 
-const burger = document.querySelector('.burger');
-const menu = document.querySelector('nav ul');
-burger.addEventListener('click', () => {
-  burger.classList.toggle('open');
-  menu.classList.toggle('open');
-});
-menu.querySelectorAll('a').forEach((a) =>
-  a.addEventListener('click', () => {
-    burger.classList.remove('open');
-    menu.classList.remove('open');
-  })
-);
+  var burger = document.querySelector('.burger');
+  var menu = document.getElementById('primary-nav');
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((e) => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
+  function setOpen(open) {
+    if (!burger || !menu) return;
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    menu.classList.toggle('open', open);
+    document.body.classList.toggle('nav-open', open);
+
+    if (open) {
+      var first = menu.querySelector('a');
+      if (first) first.focus();
+    } else if (menu.contains(document.activeElement)) {
+      burger.focus();
+    }
+  }
+
+  if (burger && menu) {
+    burger.addEventListener('click', function () {
+      setOpen(burger.getAttribute('aria-expanded') !== 'true');
     });
-  },
-  { threshold: 0.12 }
-);
-document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
-document.getElementById('year').textContent = new Date().getFullYear();
+    menu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () { setOpen(false); });
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') setOpen(false);
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!menu.classList.contains('open')) return;
+      if (menu.contains(e.target) || burger.contains(e.target)) return;
+      setOpen(false);
+    });
+  }
+
+  /* Révélation au scroll, avec repli sans JS / mouvement réduit */
+  var items = document.querySelectorAll('.reveal');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!('IntersectionObserver' in window) || reduce) {
+    items.forEach(function (el) { el.classList.add('visible'); });
+  } else {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    items.forEach(function (el) { observer.observe(el); });
+  }
+
+  var year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
+})();

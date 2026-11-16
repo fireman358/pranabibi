@@ -1,0 +1,14 @@
+{
+  "name": "pranabibi",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Site vitrine PranaBibi — Cloudflare Worker (assets statiques)",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "wrangler deploy --dry-run"
+  },
+  "devDependencies": {
+    "wrangler": "4.163.0"
+  }
+}

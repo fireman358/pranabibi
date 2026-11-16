@@ -2,67 +2,105 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mentions légales — PranaBibi</title>
-  <meta name="robots" content="noindex">
-  <link rel="icon" type="image/svg+xml" href="/brand/favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mentions légales — PranaBibi | Institut de beauté à Arquennes</title>
+  <meta name="description" content="Mentions légales de PranaBibi, institut de beauté et massages à Arquennes (Seneffe) : éditeur, hébergement, données personnelles et prix.">
+  <link rel="canonical" href="/mentions-legales">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="PranaBibi">
+  <meta property="og:locale" content="fr_BE">
+  <meta property="og:title" content="Mentions légales — PranaBibi">
+  <meta property="og:description" content="Mentions légales de PranaBibi, institut de beauté et massages à Arquennes (Seneffe).">
+  <meta property="og:url" content="/mentions-legales">
+  <meta property="og:image" content="/img/og-image.jpg">
+  <meta name="theme-color" content="#2A0A06">
+
   <link rel="icon" type="image/png" sizes="32x32" href="/brand/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/brand/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/brand/apple-touch-icon.png">
+
+  <link rel="preload" href="/fonts/cormorant.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/jost.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/style.css">
+  <script>
+    document.documentElement.classList.add('js');
+    window.setTimeout(function () {
+      document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
+    }, 3000);
+  </script>
 </head>
 <body>
 
-<header>
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<header class="site-header">
   <div class="wrap">
     <a class="brand" href="/">
-      <img src="/brand/lotus.svg" alt="Logo lotus PranaBibi">
+      <img src="/brand/seal.jpg" alt="" width="48" height="48" decoding="async">
       <span class="wordmark">PranaBibi</span>
     </a>
-    <nav>
-      <ul>
+    <nav aria-label="Navigation principale">
+      <ul id="primary-nav">
+        <li><a href="/#savoir-faire">L'institut</a></li>
         <li><a href="/#soins">Les soins</a></li>
-        <li><a href="/tarifs.html">Tarifs</a></li>
+        <li><a href="/tarifs">Tarifs</a></li>
         <li><a href="/#contact">Contact</a></li>
         <li><a class="cta" href="tel:+32493828331">0493 82 83 31</a></li>
       </ul>
     </nav>
-    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
-<main class="legal">
-  <h1>Mentions légales</h1>
+<main id="main" class="page-head">
+  <div class="wrap legal">
+    <nav class="breadcrumbs" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a><span class="sep">›</span><span aria-current="page">Mentions légales</span>
+    </nav>
 
-  <h2>Éditeur du site</h2>
-  <p><strong>PranaBibi — Institut de Beauté &amp; Massages</strong><br>
-  45 rue des Carrières, 7181 Arquennes, Belgique<br>
-  TVA : BE071 94 29 303<br>
-  Téléphone : <a href="tel:+32493828331">0493 82 83 31</a><br>
-  Web : pranabibi.com — Facebook : facebook.com/PranaBibi — Instagram : @pranabibi</p>
+    <h1>Mentions légales</h1>
 
-  <h2>Hébergement</h2>
-  <p>Site statique hébergé et servi par un Cloudflare Worker (assets statiques), via le domaine pranabibi.com.</p>
+    <h2>Éditeur du site</h2>
+    <p><strong>Bibi Ahamadi</strong> — personne physique exerçant sous la dénomination <strong>PranaBibi</strong>.<br>
+    45 Rue des Carrières, 7181 Arquennes (Seneffe), Belgique.<br>    N° d'entreprise (TVA) : <strong>BE 0719.429.303</strong>.<br>
+    Téléphone : <a href="tel:+32493828331">0493 82 83 31</a>.<br>
+    Responsable de la publication : Bibi Ahamadi.</p>
 
-  <h2>Données personnelles</h2>
-  <p>Ce site ne dépose aucun cookie et ne collecte aucune donnée personnelle de navigation. Les seuls traitements éventuels concernent les demandes de rendez-vous que vous adressez directement par téléphone, Facebook ou Instagram.</p>
+    <h2>Hébergement</h2>
+    <p>Site statique hébergé et servi par <strong>Cloudflare, Inc.</strong>, 101 Townsend Street, San Francisco, CA 94107, États-Unis — <a href="https://www.cloudflare.com" target="_blank" rel="noopener">cloudflare.com</a>, via Cloudflare Workers.</p>
 
-  <h2>Propriété intellectuelle</h2>
-  <p>L'ensemble des contenus de ce site (textes, logo lotus, visuels) est la propriété de PranaBibi. Toute reproduction sans autorisation est interdite.</p>
+    <h2>Données personnelles</h2>
+    <p>Ce site ne dépose aucun cookie et ne collecte aucune donnée personnelle via un formulaire. Les polices de caractères sont hébergées sur le site : aucun appel n'est fait à un service tiers de polices.</p>
+    <p>Comme tout hébergeur, Cloudflare peut conserver des journaux techniques (adresse IP, date, page demandée) pour assurer la sécurité et la disponibilité du service, conformément à sa politique de confidentialité. Les demandes de rendez-vous se font directement par téléphone.</p>
 
-  <h2>Prix et offre</h2>
-  <p>Les tarifs affichés sont exprimés en euros, toutes taxes comprises. L'offre de lancement (-20% sur l'ensemble des soins jusqu'au 31 janvier 2027) est valable une fois par prestation et par personne.</p>
+    <h2>Propriété intellectuelle</h2>
+    <p>L'ensemble des contenus de ce site (textes, logo, visuels) est la propriété de Bibi Ahamadi / PranaBibi. Toute reproduction sans autorisation est interdite.</p>
+
+    <h2>Prix et offre</h2>
+    <p>Les tarifs affichés sont exprimés en euros, toutes taxes comprises. L'offre de lancement (-20&nbsp;% sur l'ensemble des soins jusqu'au 31 janvier 2027) est valable une fois par prestation et par personne, dans les conditions précisées sur la page Tarifs.</p>
+
+    <p class="legal-update">Dernière mise à jour : 16 novembre 2026.</p>
+  </div>
 </main>
 
-<footer>
+<footer class="site-footer">
   <div class="wrap">
-    <img class="lotus" src="/brand/lotus.svg" alt="">
+    <img class="seal" src="/brand/seal.jpg" alt="" width="54" height="54" loading="lazy" decoding="async">
     <p class="wordmark">PranaBibi</p>
     <p class="tag">Institut de Beauté &amp; Massages</p>
-    <div class="socials">
-      <a href="https://instagram.com/pranabibi" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://facebook.com/PranaBibi" target="_blank" rel="noopener">Facebook</a>
-      <a href="tel:+32493828331">0493 82 83 31</a>
-    </div>
-    <p class="small">© <span id="year">2026</span> PranaBibi — 45 rue des Carrières, 7181 Arquennes — TVA BE071 94 29 303 — <a href="/mentions-legales.html">Mentions légales</a></p>
+    <nav class="footer-nav" aria-label="Liens de pied de page">
+      <a href="/#savoir-faire">L'institut</a>
+      <a href="/massages">Massages</a>
+      <a href="/epilations">Épilations</a>
+      <a href="/extensions-de-cils">Extensions de cils</a>
+      <a href="/faq">FAQ</a>
+      <a href="/tarifs">Tarifs</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <p class="small">© <span id="year">2026</span> PranaBibi — Bibi Ahamadi — 45 Rue des Carrières, 7181 Arquennes (Seneffe) — TVA BE 0719.429.303<br><a href="/mentions-legales">Mentions légales</a></p>
   </div>
 </footer>
 

@@ -2,52 +2,81 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tarifs — PranaBibi | Institut de Beauté &amp; Massages à Arquennes</title>
-  <meta name="description" content="Carte des tarifs PranaBibi : épilations visage, corps, zones sensibles et homme ; massages ciblés, harmonisant et ayurvédique ; extensions de cils cil à cil, volume russe et méga volume.">
-  <meta property="og:title" content="Tarifs — PranaBibi">
-  <meta property="og:description" content="Épilations douces, massages et extensions de cils UV & LED à Arquennes. Offre de lancement : -20% jusqu'au 31/01/2027.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tarifs — PranaBibi | Institut de beauté &amp; massages à Arquennes</title>
+  <meta name="description" content="Carte des tarifs PranaBibi : épilations, massages et extensions de cils à Arquennes (Seneffe). Offre de lancement -20 % jusqu'au 31/01/2027.">
+  <link rel="canonical" href="/tarifs">
+  <meta name="theme-color" content="#2A0A06">
+
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://pranabibi.com/tarifs.html">
-  <meta property="og:image" content="https://pranabibi.com/img/og-image.jpg">
-  <link rel="icon" type="image/svg+xml" href="/brand/favicon.svg">
+  <meta property="og:site_name" content="PranaBibi">
+  <meta property="og:locale" content="fr_BE">
+  <meta property="og:title" content="Tarifs — PranaBibi">
+  <meta property="og:description" content="Épilations douces, massages et extensions de cils UV &amp; LED à Arquennes. Offre de lancement : -20 % jusqu'au 31/01/2027.">
+  <meta property="og:url" content="/tarifs">
+  <meta property="og:image" content="/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Carte des tarifs PranaBibi">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="icon" type="image/png" sizes="32x32" href="/brand/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/brand/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/brand/apple-touch-icon.png">
+
+  <link rel="preload" href="/fonts/cormorant.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/jost.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/style.css">
+  <script>
+    document.documentElement.classList.add('js');
+    window.setTimeout(function () {
+      document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
+    }, 3000);
+  </script>
 </head>
 <body>
 
-<header>
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<header class="site-header">
   <div class="wrap">
     <a class="brand" href="/">
-      <img src="/brand/lotus.svg" alt="Logo lotus PranaBibi">
+      <img src="/brand/seal.jpg" alt="" width="48" height="48" decoding="async">
       <span class="wordmark">PranaBibi</span>
     </a>
-    <nav>
-      <ul>
+    <nav aria-label="Navigation principale">
+      <ul id="primary-nav">
+        <li><a href="/#savoir-faire">L'institut</a></li>
         <li><a href="/#soins">Les soins</a></li>
-        <li><a href="/tarifs.html">Tarifs</a></li>
+        <li><a href="/tarifs" aria-current="page">Tarifs</a></li>
         <li><a href="/#contact">Contact</a></li>
         <li><a class="cta" href="tel:+32493828331">0493 82 83 31</a></li>
       </ul>
     </nav>
-    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
-<section style="padding-top:150px;">
+<main id="main" class="page-head">
   <div class="wrap">
+
+    <nav class="breadcrumbs" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a><span class="sep">›</span><span aria-current="page">Tarifs</span>
+    </nav>
+
     <div class="tarifs-intro reveal">
+      <p class="eyebrow">Institut de beauté &amp; massages</p>
       <h1>Carte des tarifs</h1>
-      <div class="divider"><img src="/brand/lotus.svg" alt=""></div>
-      <p>Tous nos soins sont réalisés avec des produits de qualité, dans le respect de votre peau et de votre santé. <strong>Offre de lancement : -20% sur l'ensemble des soins jusqu'au 31 janvier 2027</strong> (une fois par prestation et par personne).</p>
+      <div class="divider"><img src="/brand/seal.jpg" alt="" width="30" height="30" loading="lazy" decoding="async"></div>
+      <p>Tous nos soins sont réalisés avec des produits de qualité, dans le respect de votre peau et de votre santé. <strong>Offre de lancement&nbsp;: -20&nbsp;% sur l'ensemble des soins jusqu'au 31 janvier 2027</strong> (une fois par prestation et par personne).</p>
     </div>
 
     <div class="tarif-bloc reveal" id="epilations">
       <h2>Épilations</h2>
-      <p class="bloc-note">Épilation douce, cire sans colophane — pour hommes et femmes, douces &amp; respectueuses.</p>
-      <div class="tarif-cols">
+      <p class="bloc-note">Épilation douce, cire sans colophane — pour femmes et hommes.</p>
+      <div class="tarif-cols two">
         <div class="tarif-table">
           <h3>Visage</h3>
           <ul>
@@ -80,49 +109,79 @@
             <li><span>Contours de barbe</span><span class="dots"></span><span class="prix">10 €</span></li>
             <li><span>Nuque ou épaules</span><span class="dots"></span><span class="prix">15 €</span></li>
             <li><span>Torse</span><span class="dots"></span><span class="prix">20 €</span></li>
-            <li><span>Dos (bas jusqu'aux épaules)</span><span class="dots"></span><span class="prix">25 €</span></li>
+            <li><span>Dos (jusqu'aux épaules)</span><span class="dots"></span><span class="prix">25 €</span></li>
           </ul>
         </div>
       </div>
       <div class="tarif-opts">
         <div class="tarif-opt">
-          <h4>Forfaits économiques</h4>
-          <p>Des forfaits économiques sont possibles : contactez-nous pour composer votre forfait sur mesure.</p>
-        </div>
-        <div class="tarif-opt">
           <h4>Option add-on : massage ciblé après épilation</h4>
-          <p>Prolongez votre moment de bien-être : après votre épilation, profitez d'un massage ciblé express à prix doux. Au choix : massage facio-crânien, épaules &amp; dos, ou legs léger (jambes lourdes).</p>
+          <p>Prolongez votre moment de bien-être : après votre épilation, profitez d'un massage ciblé express à prix doux. Au choix : massage facio-crânien, épaules &amp; dos, ou jambes légères.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarif-bloc reveal" id="forfaits">
+      <h2>Forfaits</h2>
+      <p class="bloc-note">Trois formules pour combiner les soins du corps.</p>
+      <div class="tarif-cols">
+        <div class="tarif-table forfait">
+          <h3>Escale Classique</h3>
+          <ul>
+            <li>Demi-jambes</li>
+            <li>Aisselles</li>
+            <li>Maillot brésilien</li>
+          </ul>
+          <p class="forfait-prix">50 €</p>
+        </div>
+        <div class="tarif-table forfait">
+          <h3>Escale Intégrale</h3>
+          <ul>
+            <li>Demi-jambes</li>
+            <li>Aisselles</li>
+            <li>Maillot intégral</li>
+          </ul>
+          <p class="forfait-prix">56 €</p>
+        </div>
+        <div class="tarif-table forfait">
+          <h3>Total Body</h3>
+          <ul>
+            <li>Jambes entières</li>
+            <li>Aisselles</li>
+            <li>Maillot intégral</li>
+          </ul>
+          <p class="forfait-prix">65 €</p>
         </div>
       </div>
     </div>
 
     <div class="tarif-bloc reveal" id="massages">
       <h2>Massages &amp; relaxation</h2>
-      <p class="bloc-note">Pour hommes et femmes.</p>
+      <p class="bloc-note">Soins ciblés pour les femmes et les hommes.</p>
       <div class="tarif-cols">
         <div class="tarif-table">
           <h3>Soins ciblés express — 30 min</h3>
           <ul>
             <li><span>Facio-crânien</span><span class="dots"></span><span class="prix">35 €</span></li>
             <li><span>Épaules &amp; dos</span><span class="dots"></span><span class="prix">35 €</span></li>
-            <li><span>Legs léger (jambes lourdes)</span><span class="dots"></span><span class="prix">35 €</span></li>
+            <li><span>Jambes légères</span><span class="dots"></span><span class="prix">35 €</span></li>
           </ul>
-          <p style="margin-top:14px;font-size:14.5px;font-style:italic;color:#7a5a44;">Des pauses bien-être ultra-efficaces à glisser facilement dans votre journée !</p>
+          <p class="effet">Des pauses bien-être ultra-efficaces à glisser facilement dans votre journée.</p>
         </div>
         <div class="tarif-table">
           <h3>Soins corporels complets</h3>
           <ul>
-            <li><span>Massage harmonisant — 1h00</span><span class="dots"></span><span class="prix">65 €</span></li>
-            <li><span>Massage ayurvédique — 1h15</span><span class="dots"></span><span class="prix">80 €</span></li>
+            <li><span>Massage harmonisant — 1 h 00</span><span class="dots"></span><span class="prix">65 €</span></li>
+            <li><span>Massage ayurvédique — 1 h 15</span><span class="dots"></span><span class="prix">80 €</span></li>
           </ul>
-          <p style="margin-top:14px;font-size:14.5px;font-style:italic;color:#7a5a44;">Une immersion totale pour rééquilibrer le corps et l'esprit.</p>
+          <p class="effet">Une immersion totale pour rééquilibrer le corps et l'esprit.</p>
         </div>
       </div>
     </div>
 
     <div class="tarif-bloc reveal" id="cils">
       <h2>Extensions de cils</h2>
-      <p class="bloc-note">Colle UV &amp; LED — tenue maximale — séchage immédiat. Teinture longue durée disponible.</p>
+      <p class="bloc-note">Colle UV &amp; LED — tenue maximale — séchage immédiat.</p>
       <div class="tarif-cols">
         <div class="tarif-table">
           <h3>Pose complète</h3>
@@ -136,42 +195,57 @@
         <div class="tarif-table">
           <h3>Les effets</h3>
           <ul>
-            <li><span><strong>Cil à cil</strong> — effet naturel &amp; élégant : une extension posée sur chaque cil naturel pour un effet mascara discret et raffiné au quotidien.</span></li>
-            <li><span><strong>Volume russe</strong> — effet fourni &amp; intense : pose de bouquets légers pour de la densité, du volume et un regard soutenu tout en douceur.</span></li>
-            <li><span><strong>Méga volume</strong> — effet glamour &amp; sophistiqué : bouquets ultralégers et très fournis pour un noir intense, un volume maximal et un regard hautement sophistiqué.</span></li>
+            <li class="effet"><strong>Cil à cil</strong> — effet naturel &amp; élégant : une extension posée sur chaque cil naturel pour un effet mascara discret et raffiné au quotidien.</li>
+            <li class="effet"><strong>Volume russe</strong> — effet fourni &amp; intense : pose de bouquets légers pour de la densité, du volume et un regard soutenu tout en douceur.</li>
+            <li class="effet"><strong>Méga volume</strong> — effet glamour &amp; sophistiqué : bouquets ultralégers et très fournis pour un noir intense, un volume maximal et un regard hautement sophistiqué.</li>
           </ul>
         </div>
       </div>
       <div class="tarif-opts">
         <div class="tarif-opt">
-          <h4>Dépose d'extensions — 15 €</h4>
-          <p>« Retrait doux des extensions dans le respect de la santé de vos cils naturels. »</p>
+          <h4>Conditions de retouche</h4>
+          <p>Tarif retouche valable dans les 3 semaines suivant la pose, s'il reste au moins 30 % d'extensions.</p>
         </div>
         <div class="tarif-opt">
-          <h4>Conditions de retouche</h4>
-          <p>Tarif retouche valable dans les 3 semaines suivant la pose, s'il reste au moins 30 % d'extensions — soit 3 semaines de délai entre la pose et la retouche.</p>
+          <h4>Tenue &amp; entretien</h4>
+          <p>Colle UV &amp; LED pour une tenue longue durée et un séchage immédiat. Dépose douce, dans le respect de vos cils naturels.</p>
         </div>
       </div>
     </div>
 
-    <p class="tarifs-footer reveal">
-      <img class="lotus" src="/brand/lotus.svg" alt="">
-      « Au plaisir de prendre soin de vous. Pranament vôtre… »
-    </p>
-  </div>
-</section>
+    <div class="sec-head reveal">
+      <p class="eyebrow">En savoir plus</p>
+      <h2>Les prestations</h2>
+    </div>
+    <div class="related reveal">
+      <a href="/massages">Massages</a>
+      <a href="/epilations">Épilations</a>
+      <a href="/extensions-de-cils">Extensions de cils</a>
+    </div>
 
-<footer>
+    <p class="tarifs-footer reveal">
+      <img class="seal" src="/brand/seal.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+      Pranament vôtre…
+    </p>
+
+  </div>
+</main>
+
+<footer class="site-footer">
   <div class="wrap">
-    <img class="lotus" src="/brand/lotus.svg" alt="">
+    <img class="seal" src="/brand/seal.jpg" alt="" width="54" height="54" loading="lazy" decoding="async">
     <p class="wordmark">PranaBibi</p>
     <p class="tag">Institut de Beauté &amp; Massages</p>
-    <div class="socials">
-      <a href="https://instagram.com/pranabibi" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://facebook.com/PranaBibi" target="_blank" rel="noopener">Facebook</a>
-      <a href="tel:+32493828331">0493 82 83 31</a>
-    </div>
-    <p class="small">© <span id="year">2026</span> PranaBibi — 45 rue des Carrières, 7181 Arquennes — TVA BE071 94 29 303 — <a href="/mentions-legales.html">Mentions légales</a></p>
+    <nav class="footer-nav" aria-label="Liens de pied de page">
+      <a href="/#savoir-faire">L'institut</a>
+      <a href="/massages">Massages</a>
+      <a href="/epilations">Épilations</a>
+      <a href="/extensions-de-cils">Extensions de cils</a>
+      <a href="/faq">FAQ</a>
+      <a href="/tarifs">Tarifs</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <p class="small">© <span id="year">2026</span> PranaBibi — Bibi Ahamadi — 45 Rue des Carrières, 7181 Arquennes (Seneffe) — TVA BE 0719.429.303<br><a href="/mentions-legales">Mentions légales</a></p>
   </div>
 </footer>
 
