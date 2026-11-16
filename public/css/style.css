@@ -1174,3 +1174,25 @@ html:not(.js) .page-head { padding-top: 56px; }
 }
 
 .tarif-bloc > .tarif-table { max-width: none; }
+
+
+/* ---------- Crédit footer ---------- */
+
+.site-footer .credit {
+  width: min(340px, 82%);
+  margin: 18px auto 0;
+  padding-top: 14px;
+  border-top: 1px solid rgba(201, 157, 82, .22);
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: .06em;
+  color: rgba(243, 231, 210, .62);
+}
+.site-footer .credit a {
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: color .25s ease, border-color .25s ease;
+}
+.site-footer .credit a:hover { color: var(--gold-light); border-color: var(--gold-light); }
