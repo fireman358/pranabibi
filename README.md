@@ -41,6 +41,12 @@ OPTIONS-RENDEZ-VOUS.md    options de formulaire/reservation
 
 **URLs publiques** : `/`, `/massages`, `/epilations`, `/extensions-de-cils`, `/faq`, `/tarifs`, `/mentions-legales` — sans extension. Les variantes `.html` sont redirigées en 301 par `_redirects` (le `html_handling` Cloudflare redirigerait sinon en 307).
 
+## Conventions de liens
+
+- **Interne, ancre, `tel:`** : même onglet (pas de `target="_blank"`).
+- **Externe** (Instagram, Facebook, Google Maps, Cloudflare, crédit Edukisto) : nouvel onglet avec `target="_blank" rel="noopener"` et indication accessible `sr-only` « (nouvel onglet) ».
+- Ne jamais ouvrir un lien interne dans un nouvel onglet : cela casse le bouton retour, multiplie les onglets et gêne l'accessibilité.
+
 ## Développement
 
 ```bash

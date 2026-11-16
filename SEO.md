@@ -26,6 +26,7 @@
 - **Canonical** relative (correcte sur la maquette comme sur le domaine final), OG/Twitter, `theme-color`.
 - **Performance** : fontes auto-hébergées + `preload`, images dimensionnées, `loading="lazy"` sous la ligne de flottaison, `fetchpriority="high"` sur le sceau du héros, aucun tiers, CSS ~28 Ko, JS ~2 Ko.
 - **Technique** : HTTPS/HSTS, CSP, `X-Content-Type-Options`, `Referrer-Policy`, 404 personnalisée, URLs sans extension, mobile 390 px, contrastes AA, `prefers-reduced-motion`, navigation clavier.
+- **Liens** : internes, ancres et `tel:` en même onglet ; liens externes en nouvel onglet avec `rel="noopener"` et indication accessible « (nouvel onglet) ». Aucun `target="_blank"` sur un lien interne.
 
 ## 2. Le point à connaître : `noindex` de la maquette
 
