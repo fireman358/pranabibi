@@ -68,7 +68,7 @@ Le on-page est prêt ; le classement local dépend surtout de signaux hors site 
 5. **Contenu** : 2 à 4 articles par an (bienfaits du massage, entretien des cils, épilation et peau, rituels de saison), sans promesse médicale. Une page « À propos » plus complète peut être ajoutée si la cliente fournit plus de matière.
 6. **Backlinks locaux** : partenaires, presse locale (Seneffe/Arquennes), annuaires belges, associations, événements. Pas d'achat de liens.
 7. **Réseaux** : Facebook/Instagram cohérents avec le site (même nom, même adresse, lien vers le site).
-8. **Cohérence des prix** : les forfaits Wix ne sont pas cohérents avec les prix du folder ; à trancher avant publication (voir `README.md`).
+8. **Cohérence des prix** : forfaits recalculés (44 / 50 / 56 €, soit 4 à 6 € de moins que l'addition à la carte). Confirmer l'application de l'offre -20 % aux forfaits.
 
 ## 4. Mesure
 

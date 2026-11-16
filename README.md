@@ -95,10 +95,9 @@ positionnement bien-être/massage de PranaBibi. Ne pas les importer sur ce site.
 
 - **Prix** : la carte suit le folder fourni (qui fait foi). Certains prix diffèrent du site Wix
   (aisselles 12 vs 14 €, jambes 24 vs 30 €, maillot 18 vs 22 €…).
-- **Forfaits** : repris du Wix (Escale Classique 50 €, Escale Intégrale 56 €, Total Body 65 €), car absents
-  du folder. **Incohérence à arbitrer** : avec les prix du folder, l'addition à la carte donne 48 €, 56 €
-  et 62 € — les forfaits ne sont donc pas moins chers. Soit on ajuste les forfaits, soit on applique les
-  prix unitaires Wix.
+- **Forfaits** : recalculés sur les prix du folder — Escale Classique **44 €** (48 € à la carte), Escale
+  Intégrale **50 €** (56 €), Total Body **56 €** (62 €), soit 4 à 6 € d'économie. Confirmer si l'offre
+  de lancement -20 % s'applique aussi aux forfaits.
 - **Horaires** : repris de la page contact du site (Lun–Ven 9h–19h, Sam & Dim 10h–20h, sur rendez-vous).
 - **Photos** : le portrait réel (Phil.G) est utilisé. Les autres visuels du site Wix sont des images
   IA/stock (dont une avec le logo Wix) : non repris.

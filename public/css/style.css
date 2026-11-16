@@ -810,16 +810,36 @@ nav .cta:hover { background: var(--gold); color: var(--espresso); }
   border-bottom: 0;
 }
 
-.forfait-prix {
+.forfait-compare {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
   margin-top: 14px;
   padding-top: 14px;
   border-top: 1px solid rgba(201, 157, 82, .50);
   font-family: var(--font-title);
-  font-weight: 600;
-  font-size: 28px;
   line-height: 1;
+}
+.forfait-compare s { font-size: 17px; color: var(--ink-soft); }
+.forfait-prix { font-weight: 600; font-size: 28px; color: var(--bordeaux); }
+.forfait-saving {
+  margin-top: 6px;
   text-align: center;
-  color: var(--bordeaux);
+  font-family: var(--font-caps);
+  font-size: 10.5px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+}
+.forfait-note {
+  max-width: 640px;
+  margin: 20px auto 0;
+  text-align: center;
+  font-family: var(--font-title);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--ink-soft);
 }
 
 .tarif-table .effet { font-size: 14.5px; line-height: 1.6; color: var(--ink-soft); }
