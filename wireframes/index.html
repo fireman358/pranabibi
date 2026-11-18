@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>PranaBibi — Wireframes (présentation client)</title>
+<style>
+  :root {
+    --wf-bg: #f2f2f2;
+    --wf-block: #d9d9d9;
+    --wf-block-dark: #b3b3b3;
+    --wf-text: #555;
+    --wf-line: #999;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background: #e8e8e8;
+    color: #333;
+    padding: 32px 16px 64px;
+  }
+
+  .deck { max-width: 920px; margin: 0 auto; }
+
+  /* ---------- Slide ---------- */
+  .slide {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 36px 40px;
+    margin-bottom: 28px;
+    page-break-inside: avoid;
+  }
+  .slide-intro { text-align: center; padding: 64px 40px; }
+  .slide-intro h1 { font-size: 30px; letter-spacing: 1px; margin-bottom: 10px; color: #444; }
+  .slide-intro p { color: #777; font-size: 15px; }
+
+  .kicker {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 6px;
+  }
+  .slide h2 { font-size: 20px; color: #444; margin-bottom: 4px; }
+  .slide .note { font-size: 12.5px; color: #888; margin-bottom: 18px; }
+
+  /* ---------- Wireframe canvas ---------- */
+  .wf {
+    background: var(--wf-bg);
+    border: 1px solid var(--wf-line);
+    padding: 18px;
+    border-radius: 4px;
+  }
+  .wf * { font-family: inherit; }
+
+  .b {
+    background: var(--wf-block);
+    border-radius: 3px;
+    color: var(--wf-text);
+    font-size: 10.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 22px;
+    padding: 4px 6px;
+  }
+  .b.dark { background: var(--wf-block-dark); }
+  .b.ghost { background: transparent; border: 1px dashed var(--wf-line); color: #888; min-height: 20px; }
+  .b.title { font-size: 16px; min-height: 40px; }
+  .b.small { font-size: 9px; min-height: 16px; padding: 2px 4px; }
+
+  /* ---------- Reusable wireframe parts ---------- */
+  .wf-header { display: flex; gap: 10px; align-items: center; margin-bottom: 14px; }
+  .wf-logo { width: 92px; flex-shrink: 0; min-height: 34px; }
+  .wf-nav { display: flex; gap: 6px; flex: 1; }
+  .wf-nav .b { flex: 1; }
+  .wf-cta { width: 92px; flex-shrink: 0; min-height: 34px; }
+
+  .cols { display: flex; gap: 10px; }
+  .col { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+
+  .spacer { height: 10px; }
+  .footer-note {
+    margin-top: 14px; font-size: 11px; color: #999; text-align: center;
+  }
+
+  /* ---------- Legend ---------- */
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 11px; color: #777; margin-top: 16px; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend i { width: 22px; height: 12px; border-radius: 2px; display: inline-block; }
+  .legend .l-block { background: var(--wf-block); }
+  .legend .l-dark { background: var(--wf-block-dark); }
+  .legend .l-ghost { border: 1px dashed var(--wf-line); }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .slide { border: none; margin-bottom: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="deck">
+
+  <!-- ============ SLIDE 1 : INTRO ============ -->
+  <section class="slide slide-intro">
+    <p class="kicker">Proposition de site — étape structure</p>
+    <h1>Wireframes PranaBibi</h1>
+    <p>6 pages vues — <em>Comment j'ai structuré ton site avant de le dessiner</em><br>
+    Prochaine étape : la direction graphique (charte issue de ta carte de visite).</p>
+    <div class="legend" style="justify-content:center;margin-top:24px;">
+      <span><i class="l-block"></i> Bloc de contenu</span>
+      <span><i class="l-dark"></i> Zone visuelle / photo</span>
+      <span><i class="l-ghost"></i> À construire ensemble (textes, photos, tarifs définitifs)</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 2 : PLAN DU SITE ============ -->
+  <section class="slide">
+    <p class="kicker">Vue d'ensemble</p>
+    <h2>Plan du site</h2>
+    <p class="note">Toutes les pages sont accessibles depuis le menu principal, en 1 clic.</p>
+    <div class="wf">
+      <div class="b title">Accueil — présentation, deux expertises, offre de lancement</div>
+      <div class="spacer"></div>
+      <div class="cols">
+        <div class="col"><div class="b">Épilations</div><div class="b small">visage · corps · homme · cire sans colophane</div></div>
+        <div class="col"><div class="b">Massages</div><div class="b small">ciblés 30 min · complets · déroulé · bon à savoir</div></div>
+        <div class="col"><div class="b">Extensions de cils</div><div class="b small">3 techniques · pose · entretien</div></div>
+      </div>
+      <div class="spacer"></div>
+      <div class="cols">
+        <div class="col"><div class="b">Tarifs</div><div class="b small">épilations · forfaits · massages · cils</div></div>
+        <div class="col"><div class="b">FAQ</div><div class="b small">rendez-vous · soins · accès</div></div>
+        <div class="col"><div class="b ghost">Blog / conseils<br>(option à discuter)</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 3 : ACCUEIL ============ -->
+  <section class="slide">
+    <p class="kicker">Page 1 / 6</p>
+    <h2>Accueil</h2>
+    <p class="note">Accroche + expertise + offre pour convertir dès la première visite.</p>
+    <div class="wf">
+      <div class="wf-header">
+        <div class="b wf-logo">Logo</div>
+        <div class="wf-nav"><div class="b small">Accueil</div><div class="b small">Épilations</div><div class="b small">Massages</div><div class="b small">Cils</div><div class="b small">Tarifs</div><div class="b small">FAQ</div></div>
+        <div class="b wf-cta dark">Rendez-vous</div>
+      </div>
+      <div class="b dark" style="min-height:96px;">Hero — accroche + photo d'ambiance<br><em>(photo professionnelle à définir)</em></div>
+      <div class="spacer"></div>
+      <div class="b title">Savoir-faire — « Deux expertises, une même exigence »</div>
+      <div class="b" style="min-height:34px;">2 colonnes : épilation douce / massages &amp; cils</div>
+      <div class="spacer"></div>
+      <div class="b title dark" style="color:#fff;">Les soins — 3 cartes cliquables</div>
+      <div class="cols">
+        <div class="col"><div class="b" style="min-height:64px;">Épilations<br>→ page</div></div>
+        <div class="col"><div class="b" style="min-height:64px;">Massages<br>→ page</div></div>
+        <div class="col"><div class="b" style="min-height:64px;">Cils<br>→ page</div></div>
+      </div>
+      <div class="spacer"></div>
+      <div class="b title">Offre de lancement — conditionnel</div>
+      <div class="b" style="min-height:30px;">Bloc mise en avant (à finaliser avec toi)</div>
+      <div class="spacer"></div>
+      <div class="cols">
+        <div class="col" style="flex:2;"><div class="b title">L'institut</div><div class="b" style="min-height:44px;">Présentation + portrait<br><em>(photo & texte à valider)</em></div></div>
+        <div class="col"><div class="b title dark">Prendre rendez-vous</div><div class="b small">Cordonnées · horaires · accès</div></div>
+      </div>
+      <div class="spacer"></div>
+      <div class="b small">Footer — mentions légales · réseaux · crédits</div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 4 : ÉPILATIONS ============ -->
+  <section class="slide">
+    <p class="kicker">Page 2 / 6</p>
+    <h2>Épilations</h2>
+    <p class="note">Réassurance : douceur, cire sans colophane, homme.</p>
+    <div class="wf">
+      <div class="wf-header">
+        <div class="b wf-logo">Logo</div>
+        <div class="wf-nav"><div class="b small">Accueil</div><div class="b small">[ active ]</div><div class="b small">Massages</div><div class="b small">Cils</div><div class="b small">Tarifs</div><div class="b small">FAQ</div></div>
+        <div class="b wf-cta dark">Rendez-vous</div>
+      </div>
+      <div class="b title">Épilations douces — Votre titre / positionnement</div>
+      <div class="spacer"></div>
+      <div class="cols">
+        <div class="col"><div class="b">Visage</div><div class="b small">liste des zones</div></div>
+        <div class="col"><div class="b">Corps &amp; membres</div><div class="b small">liste des zones</div></div>
+        <div class="col"><div class="b">Zones sensibles &amp; maillot</div><div class="b small">liste des zones</div><div class="b small ghost">à valider avec toi</div></div>
+      </div>
+      <div class="spacer"></div>
+      <div class="b">Épilation homme — bloc dédié</div>
+      <div class="spacer"></div>
+      <div class="b dark" style="min-height:48px;">La cire sans colophane — réassurance qualité</div>
+      <div class="spacer"></div>
+      <div class="b small dark">Renvoi tarifs + Rendez-vous</div>
+      <div class="spacer"></div>
+      <div class="b small">Footer</div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 5 : MASSAGES ============ -->
+  <section class="slide">
+    <p class="kicker">Page 3 / 6</p>
+    <h2>Massages</h2>
+    <p class="note">Deux gammes claires (ciblé / complet) + explication du déroulé.</p>
+    <div class="wf">
+      <div class="wf-header">
+        <div class="b wf-logo">Logo</div>
+        <div class="wf-nav"><div class="b small">Accueil</div><div class="b small">Épilations</div><div class="b small">[ active ]</div><div class="b small">Cils</div><div class="b small">Tarifs</div><div class="b small">FAQ</div></div>
+        <div class="b wf-cta dark">Rendez-vous</div>
+      </div>
+      <div class="b title">Massages &amp; relaxation — Votre titre</div>
+      <div class="spacer"></div>
+      <div class="cols">
+        <div class="col" style="flex:1.4;"><div class="b">Massages ciblés — 30 min</div><div class="b small">2 types proposés</div></div>
+        <div class="col" style="flex:1.4;"><div class="b">Massages complets</div><div class="b small">2 types proposés</div></div>
+        <div class="col"><div class="b dark" style="min-height:52px;">Photo d'ambiance<br><em>(à définir)</em></div></div>
+      </div>
+      <div class="spacer"></div>
+      <div class="b" style="min-height:36px;">Comment se déroule un massage ? — 3 étapes</div>
+      <div class="spacer"></div>
+      <div class="cols">
+        <div class="col"><div class="b">Qui réalise les soins ?</div></div>
+        <div class="col"><div class="b">Bon à savoir</div></div>
+      </div>
+      <div class="spacer"></div>
+      <div class="b small dark">Renvoi tarifs + Rendez-vous</div>
+      <div class="spacer"></div>
+      <div class="b small">Footer</div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 6 : EXTENSIONS DE CILS ============ -->
+  <section class="slide">
+    <p class="kicker">Page 4 / 6</p>
+    <h2>Extensions de cils</h2>
+    <p class="note">Techniques expliquées simplement + entretien (fidélisation).</p>
+    <div class="wf">
+      <div class="wf-header">
+        <div class="b wf-logo">Logo</div>
+        <div class="wf-nav"><div class="b small">Accueil</div><div class="b small">Épilations</div><div class="b small">Massages</div><div class="b small">[ active ]</div><div class="b small">Tarifs</div><div class="b small">FAQ</div></div>
+        <div class="b wf-cta dark">Rendez-vous</div>
+      </div>
+      <div class="b title">Extensions de cils — Votre titre</div>
+      <div class="spacer"></div>
+      <div class="b title">Trois techniques</div>
+      <div class="cols">
+        <div class="col"><div class="b" style="min-height:48px;">Technique 1<br><em>(nom à valider)</em></div></div>
+        <div class="col"><div class="b" style="min-height:48px;">Technique 2</div></div>
+        <div class="col"><div class="b" style="min-height:48px;">Technique 3</div></div>
+      </div>
+      <div class="spacer"></div>
+      <div class="cols">
+        <div class="col"><div class="b">La pose — étapes</div></div>
+        <div class="col"><div class="b">Entretien, retouche &amp; dépose</div></div>
+      </div>
+      <div class="spacer"></div>
+      <div class="b">Bon à savoir</div>
+      <div class="spacer"></div>
+      <div class="b dark">Prendre rendez-vous</div>
+      <div class="spacer"></div>
+      <div class="b small">Footer</div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 7 : TARIFS ============ -->
+  <section class="slide">
+    <p class="kicker">Page 5 / 6</p>
+    <h2>Tarifs</h2>
+    <p class="note">Une carte claire, par famille de prestations. <em>Prix affichés = blocs à valider ensemble.</em></p>
+    <div class="wf">
+      <div class="wf-header">
+        <div class="b wf-logo">Logo</div>
+        <div class="wf-nav"><div class="b small">Accueil</div><div class="b small">Épilations</div><div class="b small">Massages</div><div class="b small">Cils</div><div class="b small">[ active ]</div><div class="b small">FAQ</div></div>
+        <div class="b wf-cta dark">Rendez-vous</div>
+      </div>
+      <div class="b title">Carte des tarifs</div>
+      <div class="spacer"></div>
+      <div class="cols">
+        <div class="col">
+          <div class="b dark">Épilations</div>
+          <div class="b small ghost">zone — €</div>
+          <div class="b small ghost">zone — €</div>
+          <div class="b small ghost">zone — €</div>
+        </div>
+        <div class="col">
+          <div class="b dark">Forfaits</div>
+          <div class="b small ghost">forfait — €</div>
+          <div class="b small ghost">forfait — €</div>
+          <div class="b small ghost">forfait — €</div>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div class="cols">
+        <div class="col">
+          <div class="b dark">Massages &amp; relaxation</div>
+          <div class="b small ghost">prestation — €</div>
+          <div class="b small ghost">prestation — €</div>
+        </div>
+        <div class="col">
+          <div class="b dark">Extensions de cils</div>
+          <div class="b small ghost">prestation — €</div>
+          <div class="b small ghost">prestation — €</div>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div class="b ghost">Conditions (groupe, durée, précisions) — à rédiger avec toi</div>
+      <div class="spacer"></div>
+      <div class="b small">Footer</div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 8 : FAQ ============ -->
+  <section class="slide">
+    <p class="kicker">Page 6 / 6</p>
+    <h2>FAQ</h2>
+    <p class="note">Réponses aux questions fréquentes = moins de sollicitations, plus de confiance.</p>
+    <div class="wf">
+      <div class="wf-header">
+        <div class="b wf-logo">Logo</div>
+        <div class="wf-nav"><div class="b small">Accueil</div><div class="b small">Épilations</div><div class="b small">Massages</div><div class="b small">Cils</div><div class="b small">Tarifs</div><div class="b small">[ active ]</div></div>
+      </div>
+      <div class="b title">FAQ — questions fréquentes</div>
+      <div class="spacer"></div>
+      <div class="b title">Prendre rendez-vous</div>
+      <div class="cols">
+        <div class="col"><div class="b small ghost">question → réponse</div><div class="b small ghost">question → réponse</div></div>
+        <div class="col"><div class="b small ghost">question → réponse</div><div class="b small ghost">question → réponse</div></div>
+      </div>
+      <div class="spacer"></div>
+      <div class="b title">Les soins</div>
+      <div class="cols">
+        <div class="col"><div class="b small ghost">question → réponse</div><div class="b small ghost">question → réponse</div></div>
+        <div class="col"><div class="b small ghost">question → réponse</div><div class="b small ghost">question → réponse</div></div>
+      </div>
+      <div class="spacer"></div>
+      <div class="b ghost">Accès / parking / localisation — à compléter</div>
+      <div class="spacer"></div>
+      <div class="b small">Footer</div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 9 : ÉTAPES ============ -->
+  <section class="slide">
+    <p class="kicker">Prochaines étapes</p>
+    <h2>Ce qu'on construit ensemble</h2>
+    <p class="note">La structure est prête — le contenu final, c'est notre collaboration.</p>
+    <div class="wf">
+      <div class="cols">
+        <div class="col"><div class="b dark" style="min-height:56px;">1. Direction graphique<br><em>charte issue de ta carte de visite</em></div></div>
+        <div class="col"><div class="b dark" style="min-height:56px;">2. Tes contenus<br><em>textes, photos, tarifs définitifs</em></div></div>
+        <div class="col"><div class="b dark" style="min-height:56px;">3. Mise en ligne<br><em>pranabibi.com + Google</em></div></div>
+      </div>
+      <div class="spacer"></div>
+      <div class="b ghost">Options à discuter : module de réservation en ligne, avis clients, blog conseils, page cadeau/bon cadeau</div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
