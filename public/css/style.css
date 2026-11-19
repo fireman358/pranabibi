@@ -1361,43 +1361,43 @@ body.has-promo .hero { padding-top: 48px; }
 .gift-ribbon {
   position: fixed;
   left: 0;
-  bottom: 0;
+  top: 169px;
   z-index: 55;
-  width: 200px;
-  height: 80px;
+  width: 800px;
+  height: 600px;
   overflow: visible;
   pointer-events: none;
 }
 .gift-ribbon-link {
   position: absolute;
-  left: -30px;
-  bottom: 35px;
-  width: 150px;
+  left: -120px;
+  top: 30px;
+  width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1px;
-  padding: 6px 0 7px;
-  transform: rotate(-45deg);
+  gap: 4px;
+  padding: 24px 0 28px;
+  transform: rotate(45deg);
   transform-origin: center;
   background: var(--bordeaux);
-  border-top: 1px solid var(--gold);
-  border-bottom: 1px solid var(--gold);
+  border-top: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
   color: var(--parchment);
   text-decoration: none;
   pointer-events: auto;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, .28);
 }
 .gift-ribbon-kicker {
   font-family: var(--font-caps);
-  font-size: 7px;
-  letter-spacing: .14em;
+  font-size: 28px;
+  letter-spacing: .18em;
   text-transform: uppercase;
   color: var(--gold);
 }
 .gift-ribbon-title {
   font-family: var(--font-title);
-  font-size: 16px;
+  font-size: 64px;
   line-height: 1;
   color: var(--gold-light);
 }
@@ -1431,10 +1431,10 @@ body.has-promo .hero { padding-top: 48px; }
   .promo-bar p { font-size: 12.5px; }
   .promo-bar .btn { padding: 7px 12px; }
   .promo-bar.compact { padding: 8px 16px; }
-  .gift-ribbon { width: 170px; height: 70px; }
-  .gift-ribbon-link { left: -38px; bottom: 30px; width: 120px; padding: 5px 0 6px; }
-  .gift-ribbon-kicker { font-size: 6.5px; letter-spacing: .12em; }
-  .gift-ribbon-title { font-size: 14px; }
+  .gift-ribbon { top: 173px; width: 100vw; height: 420px; }
+  .gift-ribbon-link { left: -90px; top: 14px; width: 260px; padding: 12px 0 14px; gap: 2px; }
+  .gift-ribbon-kicker { font-size: 11px; letter-spacing: .14em; }
+  .gift-ribbon-title { font-size: 28px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
