@@ -1413,7 +1413,7 @@ body.has-promo .hero { padding-top: 48px; min-height: calc(100svh - var(--header
 /* Ruban bon cadeau — ruban de coin, 4 coins sur les bords */
 
 .gift-ribbon {
-  position: absolute;
+  position: fixed;
   top: calc(var(--header-h) + var(--promo-h));
   left: 0;
   z-index: 55;
