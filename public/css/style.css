@@ -1356,28 +1356,30 @@ body.has-promo .hero { padding-top: 48px; }
 .promo-bar.compact .btn { display: none; }
 .promo-bar.compact .promo-compact-link { display: inline; }
 
-/* Ruban bon cadeau à 45° */
+/* Ruban bon cadeau — coin supérieur gauche, triangle vide */
 
 .gift-ribbon {
   position: fixed;
+  top: 0;
   left: 0;
-  top: 55%;
+  width: 620px;
+  height: 620px;
+  overflow: hidden;
   z-index: 55;
-  width: 0;
-  height: 0;
   pointer-events: none;
 }
 .gift-ribbon-link {
   position: absolute;
   left: 0;
-  top: 0;
-  width: 480px;
+  top: 320px;
+  width: 453px;
+  height: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 0 22px;
+  padding: 0 0 2px;
   transform: rotate(-45deg);
-  transform-origin: left center;
+  transform-origin: top left;
   background: var(--bordeaux);
   border-top: 2px solid var(--gold);
   border-bottom: 2px solid var(--gold);
@@ -1385,11 +1387,11 @@ body.has-promo .hero { padding-top: 48px; }
   text-decoration: none;
   pointer-events: auto;
   box-shadow: 0 18px 50px rgba(0, 0, 0, .28);
-  transition: width .35s var(--ease), padding .35s var(--ease);
+  transition: top .35s var(--ease), width .35s var(--ease), height .35s var(--ease);
 }
 .gift-ribbon-title {
   font-family: var(--font-title);
-  font-size: 44px;
+  font-size: 38px;
   line-height: 1.05;
   text-align: center;
   color: var(--gold-light);
@@ -1397,8 +1399,9 @@ body.has-promo .hero { padding-top: 48px; }
 }
 .gift-ribbon-link:hover .gift-ribbon-title { color: var(--parchment); }
 .gift-ribbon-link.compact {
-  width: 300px;
-  padding: 12px 0 14px;
+  top: 220px;
+  width: 311px;
+  height: 64px;
 }
 .gift-ribbon-link.compact .gift-ribbon-title { font-size: 26px; }
 
@@ -1418,6 +1421,7 @@ body.has-promo .hero { padding-top: 48px; }
   .lexique-grid { grid-template-columns: 1fr; }
   .promo-bar { top: 72px; margin-top: 72px; }
   body.has-promo .hero { padding-top: 40px; }
+  .gift-ribbon { display: none; }
 }
 
 @media (max-width: 600px) {
@@ -1430,11 +1434,6 @@ body.has-promo .hero { padding-top: 48px; }
   .promo-bar p { font-size: 12.5px; }
   .promo-bar .btn { padding: 7px 12px; }
   .promo-bar.compact { padding: 8px 16px; }
-  .gift-ribbon { top: auto; bottom: 0; }
-  .gift-ribbon-link { top: auto; bottom: 6px; left: 0; width: 110px; padding: 8px 0 9px; }
-  .gift-ribbon-title { font-size: 12px; }
-  .gift-ribbon-link.compact { width: 90px; padding: 6px 0 7px; }
-  .gift-ribbon-link.compact .gift-ribbon-title { font-size: 10px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
