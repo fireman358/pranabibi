@@ -1421,7 +1421,7 @@ body.has-promo .hero { padding-top: 48px; min-height: calc(100svh - var(--header
   height: 620px;
   pointer-events: none;
   transform-origin: top left;
-  transition: transform .35s var(--ease);
+  transition: transform .35s var(--ease), top .35s var(--ease);
 }
 .gift-ribbon-svg {
   position: absolute;
@@ -1455,7 +1455,7 @@ body.has-promo .hero { padding-top: 48px; min-height: calc(100svh - var(--header
   color: var(--gold-light);
   white-space: nowrap;
 }
-.gift-ribbon.compact { transform: scale(.5); }
+.gift-ribbon.compact { top: var(--header-h); transform: scale(.5); }
 
 /* Add-on */
 
@@ -1474,7 +1474,7 @@ body.has-promo .hero { padding-top: 48px; min-height: calc(100svh - var(--header
   .promo-bar { top: var(--header-h); margin-top: var(--header-h); }
   body.has-promo .hero { padding-top: 40px; }
   .gift-ribbon { top: calc(var(--header-h) + var(--promo-h)); transform: scale(.4); }
-  .gift-ribbon.compact { transform: scale(.2); }
+  .gift-ribbon.compact { top: var(--header-h); transform: scale(.2); }
 }
 
 @media (max-width: 600px) {
