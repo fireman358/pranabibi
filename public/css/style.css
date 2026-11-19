@@ -159,7 +159,7 @@ h1, h2, h3, h4 {
 .site-header .wrap {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
   gap: 16px;
   padding: 10px 0 9px;
@@ -168,13 +168,12 @@ h1, h2, h3, h4 {
 .nav-portrait {
   grid-column: 1;
   grid-row: 1;
-  justify-self: end;
-  width: 56px;
-  height: 56px;
-  margin-right: 16px;
+  justify-self: start;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 0 1px rgba(246, 212, 144, .6), 0 6px 18px rgba(0, 0, 0, .45);
+  box-shadow: 0 0 0 1px rgba(246, 212, 144, .6), 0 10px 26px rgba(0, 0, 0, .45);
 }
 
 .site-header nav { grid-column: 2; grid-row: 1; justify-self: center; }
@@ -250,6 +249,8 @@ nav .cta:hover { background: var(--gold); color: var(--espresso); }
 
 @media (max-width: 1200px) {
   :root { --header-h: 141px; }
+  .site-header .wrap { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
+  .nav-portrait { display: none; }
   nav ul { gap: 14px; }
   nav a { font-size: 11px; }
   nav .cta { padding: 8px 12px; }
@@ -1412,8 +1413,8 @@ body.has-promo .hero { padding-top: 48px; min-height: calc(100svh - var(--header
 /* Ruban bon cadeau — ruban de coin, 4 coins sur les bords */
 
 .gift-ribbon {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: calc(var(--header-h) + var(--promo-h));
   left: 0;
   z-index: 55;
   width: 620px;
@@ -1422,10 +1423,6 @@ body.has-promo .hero { padding-top: 48px; min-height: calc(100svh - var(--header
   transform-origin: top left;
   transition: transform .35s var(--ease);
 }
-@media (max-width: 1280px) {
-  .gift-ribbon { position: absolute; top: calc(var(--header-h) + var(--promo-h)); }
-}
-
 .gift-ribbon-svg {
   position: absolute;
   inset: 0;
