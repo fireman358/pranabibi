@@ -11,55 +11,56 @@
     font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     color: #2e2a2a;
     background: #eceae7;
-    padding: 28px 14px 60px;
-    line-height: 1.5;
+    padding: 14px 8px 24px;
+    line-height: 1.32;
+    font-size: 11px;
   }
   .page {
     max-width: 880px; margin: 0 auto;
     background: #fff; border: 1px solid #ddd; border-radius: 6px;
-    padding: 44px 52px;
+    padding: 22px 34px;
   }
-  @media print { body { background: #fff; padding: 0; } .page { border: none; padding: 10px; } .no-print { display: none; } }
+  @media print { body { background: #fff; padding: 0; font-size: 10px; } .page { border: none; padding: 4px 8px; max-width: none; } .no-print { display: none; } }
 
-  .doc-head { display: flex; justify-content: space-between; gap: 24px; margin-bottom: 8px; }
-  .doc-head h1 { font-size: 26px; letter-spacing: 3px; }
-  .doc-head .doc-meta { text-align: right; font-size: 13px; color: #666; }
-  .doc-sub { color: #999; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 26px; }
+  .doc-head { display: flex; justify-content: space-between; gap: 24px; margin-bottom: 4px; }
+  .doc-head h1 { font-size: 19px; letter-spacing: 3px; }
+  .doc-head .doc-meta { text-align: right; font-size: 11px; color: #666; }
+  .doc-sub { color: #999; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
 
-  .parties { display: flex; gap: 28px; margin-bottom: 30px; font-size: 13px; }
-  .parties > div { flex: 1; background: #f7f5f2; border-radius: 4px; padding: 14px 16px; }
-  .parties h3 { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #8a7f76; margin-bottom: 6px; }
+  .parties { display: flex; gap: 16px; margin-bottom: 12px; font-size: 10.5px; }
+  .parties > div { flex: 1; background: #f7f5f2; border-radius: 4px; padding: 9px 12px; }
+  .parties h3 { font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: #8a7f76; margin-bottom: 3px; }
   .parties .fill { color: #b5aaa0; font-style: italic; }
 
-  h2 { font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: #7a4a3a; border-bottom: 2px solid #7a4a3a; padding-bottom: 4px; margin: 30px 0 14px; }
+  h2 { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #7a4a3a; border-bottom: 2px solid #7a4a3a; padding-bottom: 2px; margin: 14px 0 7px; }
 
-  table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #8a7f76; padding: 6px 8px; border-bottom: 1px solid #ccc; }
-  td { padding: 7px 8px; border-bottom: 1px solid #eee; vertical-align: top; }
+  table { width: 100%; border-collapse: collapse; font-size: 10.5px; }
+  th { text-align: left; font-size: 9px; text-transform: uppercase; letter-spacing: 1px; color: #8a7f76; padding: 3px 6px; border-bottom: 1px solid #ccc; }
+  td { padding: 4px 6px; border-bottom: 1px solid #eee; vertical-align: top; }
   td.desc b { color: #4a3f36; }
-  td.desc .sub { color: #888; font-size: 12px; display: block; margin-top: 2px; }
+  td.desc .sub { color: #888; font-size: 9.5px; display: block; margin-top: 1px; }
 
-  .total-row td { border-top: 2px solid #7a4a3a; border-bottom: none; padding-top: 10px; font-size: 15px; font-weight: 600; }
+  .total-row td { border-top: 2px solid #7a4a3a; border-bottom: none; padding-top: 5px; font-size: 12px; font-weight: 600; }
 
-  .cards { display: flex; gap: 16px; margin-top: 6px; }
-  .card { flex: 1; border: 1.5px solid #d8cfc7; border-radius: 6px; padding: 16px 18px; font-size: 13px; background: #fdfcfb; }
-  .card h4 { font-size: 13px; margin-bottom: 8px; color: #4a3f36; }
-  .card .big { font-size: 21px; font-weight: 700; color: #7a4a3a; margin: 6px 0 2px; }
-  .card ul { margin: 8px 0 0 16px; color: #555; }
-  .card li { margin-bottom: 4px; }
-  .card .tag { display: inline-block; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; background: #efe8e0; color: #7a4a3a; padding: 2px 8px; border-radius: 10px; margin-bottom: 8px; }
+  .cards { display: flex; gap: 10px; margin-top: 4px; }
+  .card { flex: 1; border: 1.5px solid #d8cfc7; border-radius: 6px; padding: 10px 12px; font-size: 10.5px; background: #fdfcfb; }
+  .card h4 { font-size: 11px; margin-bottom: 4px; color: #4a3f36; line-height: 1.25; }
+  .card .big { font-size: 16px; font-weight: 700; color: #7a4a3a; margin: 3px 0 1px; }
+  .card ul { margin: 5px 0 0 14px; color: #555; }
+  .card li { margin-bottom: 2px; }
+  .card .tag { display: inline-block; font-size: 8px; letter-spacing: 1px; text-transform: uppercase; background: #efe8e0; color: #7a4a3a; padding: 1px 7px; border-radius: 10px; margin-bottom: 5px; }
 
-  .explication { background: #f7f5f2; border-radius: 4px; padding: 16px 18px; font-size: 13px; margin-top: 14px; }
-  .explication p { margin-bottom: 8px; }
+  .explication { background: #f7f5f2; border-radius: 4px; padding: 9px 12px; font-size: 10.5px; margin-top: 8px; }
+  .explication p { margin-bottom: 4px; }
   .explication b { color: #7a4a3a; }
 
-  .footnote { font-size: 11.5px; color: #999; margin-top: 26px; }
-  .signatures { display: flex; gap: 40px; margin-top: 44px; }
-  .signatures > div { flex: 1; font-size: 12px; color: #666; }
-  .sig-line { border-bottom: 1px solid #999; height: 40px; margin-bottom: 6px; }
+  .footnote { font-size: 9.5px; color: #999; margin-top: 8px; }
+  .signatures { display: flex; gap: 30px; margin-top: 18px; }
+  .signatures > div { flex: 1; font-size: 10px; color: #666; }
+  .sig-line { border-bottom: 1px solid #999; height: 28px; margin-bottom: 4px; }
 
-  .opt { background: #fff; border: 1.5px dashed #c9bfb4; border-radius: 6px; padding: 14px 18px; font-size: 13px; margin-top: 10px; }
-  .opt h4 { font-size: 12.5px; margin-bottom: 4px; }
+  .opt { background: #fff; border: 1.5px dashed #c9bfb4; border-radius: 6px; padding: 9px 12px; font-size: 10.5px; margin-top: 5px; }
+  .opt h4 { font-size: 10.5px; margin-bottom: 2px; }
   @media print { .opt { page-break-inside: avoid; } .page { max-width: none; } }
 </style>
 </head>
