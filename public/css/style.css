@@ -68,8 +68,8 @@
   --wrap: 1140px;
   --radius: 10px;
   --ease: cubic-bezier(.2, .7, .3, 1);
-  --header-h: 223px;
-  --promo-h: 0px;
+  --header-h: 160px;
+  --promo-h: 64px;
 }
 
 /* ---------- Base ---------- */
@@ -237,7 +237,7 @@ nav .cta {
 nav .cta:hover { background: var(--gold); color: var(--espresso); }
 
 @media (max-width: 1200px) {
-  :root { --header-h: 204px; }
+  :root { --header-h: 141px; }
   nav ul { gap: 14px; }
   nav a { font-size: 11px; }
   nav .cta { padding: 8px 12px; }
@@ -316,8 +316,9 @@ nav .cta:hover { background: var(--gold); color: var(--espresso); }
   width: clamp(110px, 14vw, 150px);
   height: auto;
   margin: 0 auto 26px;
-  border-radius: 50%;
-  box-shadow: 0 0 0 1px rgba(246, 212, 144, .45), 0 18px 50px rgba(0, 0, 0, .45);
+  border-radius: 0;
+  box-shadow: none;
+  filter: drop-shadow(0 16px 34px rgba(0, 0, 0, .5));
 }
 
 .hero h1 { margin: 0; }
@@ -453,7 +454,7 @@ nav .cta:hover { background: var(--gold); color: var(--espresso); }
   background: linear-gradient(90deg, transparent, var(--gold));
 }
 .sec-head .divider::after { background: linear-gradient(90deg, var(--gold), transparent); }
-.sec-head .divider img { width: 30px; height: 30px; border-radius: 50%; }
+.sec-head .divider img { width: 30px; height: 30px; }
 
 .sec-head .lead {
   font-family: var(--font-title);
@@ -1002,7 +1003,7 @@ html.js .reveal.visible { opacity: 1; transform: none; }
 }
 
 @media (max-width: 820px) {
-  :root { --header-h: 189px; }
+  :root { --header-h: 125px; }
 
   .site-header .wrap {
     grid-template-columns: auto minmax(0, 1fr) auto;
@@ -1064,7 +1065,7 @@ html.js .reveal.visible { opacity: 1; transform: none; }
 }
 
 @media (max-width: 560px) {
-  :root { --header-h: 168px; }
+  :root { --header-h: 106px; }
   body { font-size: 16px; }
   .brand img { width: 42px; height: 42px; }
   .brand-carte img { width: 140px; height: auto; }
@@ -1342,14 +1343,8 @@ a[href^="tel:"], .reveal-tel, nav .cta { white-space: nowrap; }
 
 /* Bandeau promo sticky en haut */
 
-.site-header .promo-bar {
-  position: static;
-  top: auto;
-  margin: 0;
-  border-bottom: 1px solid var(--gold);
-  box-shadow: none;
-}
 
+body.has-promo .hero { padding-top: 48px; min-height: calc(100svh - var(--header-h) - var(--promo-h)); }
 
 .promo-bar {
   position: sticky;
@@ -1449,7 +1444,7 @@ a[href^="tel:"], .reveal-tel, nav .cta { white-space: nowrap; }
   color: var(--gold-light);
   white-space: nowrap;
 }
-.gift-ribbon.compact { transform: scale(.7); }
+.gift-ribbon.compact { transform: scale(.5); }
 
 /* Add-on */
 
@@ -1466,11 +1461,14 @@ a[href^="tel:"], .reveal-tel, nav .cta { white-space: nowrap; }
 @media (max-width: 820px) {
   .lexique-grid { grid-template-columns: 1fr; }
   .promo-bar { top: var(--header-h); margin-top: var(--header-h); }
+  body.has-promo .hero { padding-top: 40px; }
   .gift-ribbon { top: calc(var(--header-h) + var(--promo-h)); transform: scale(.4); }
-  .gift-ribbon.compact { transform: scale(.28); }
+  .gift-ribbon.compact { transform: scale(.2); }
 }
 
 @media (max-width: 600px) {
+  :root { --promo-h: 101px; }
+
   .promo-bar {
     flex-wrap: wrap;
     gap: 6px 12px;

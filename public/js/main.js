@@ -80,7 +80,7 @@
 
   /* Bandeau -20 % : compact au scroll, fermable */
   var promo = document.getElementById('promo-bar');
-  if (promo && !promo.closest('.site-header')) {
+  if (promo) {
     var onPromoScroll = function () {
       promo.classList.toggle('compact', window.scrollY > 120);
     };
