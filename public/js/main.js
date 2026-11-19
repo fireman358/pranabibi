@@ -105,6 +105,41 @@
     onRibbonScroll();
   }
 
+  /* Bulle de définition au survol des termes de massage */
+  var terms = document.querySelectorAll('.term[data-def]');
+  if (terms.length && window.matchMedia('(hover: hover)').matches) {
+    var tip = document.createElement('div');
+    tip.className = 'term-tooltip';
+    tip.setAttribute('role', 'tooltip');
+    tip.hidden = true;
+    document.body.appendChild(tip);
+
+    var showTip = function (el) {
+      tip.textContent = el.getAttribute('data-def');
+      tip.hidden = false;
+      var r = el.getBoundingClientRect();
+      var tw = tip.offsetWidth;
+      var th = tip.offsetHeight;
+      var left = Math.min(Math.max(12, r.left + r.width / 2 - tw / 2), window.innerWidth - tw - 12);
+      var top = r.top - th - 10;
+      if (top < 12) top = r.bottom + 10;
+      tip.style.left = left + 'px';
+      tip.style.top = top + 'px';
+    };
+
+    var hideTip = function () { tip.hidden = true; };
+
+    terms.forEach(function (el) {
+      el.addEventListener('mouseenter', function () { showTip(el); });
+      el.addEventListener('mouseleave', hideTip);
+      el.addEventListener('focus', function () { showTip(el); });
+      el.addEventListener('blur', hideTip);
+      el.addEventListener('click', hideTip);
+    });
+
+    window.addEventListener('scroll', hideTip, { passive: true });
+  }
+
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 })();
