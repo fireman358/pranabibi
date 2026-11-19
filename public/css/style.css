@@ -165,6 +165,18 @@ h1, h2, h3, h4 {
   padding: 10px 0 9px;
 }
 
+.nav-portrait {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: end;
+  width: 56px;
+  height: 56px;
+  margin-right: 16px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px rgba(246, 212, 144, .6), 0 6px 18px rgba(0, 0, 0, .45);
+}
+
 .site-header nav { grid-column: 2; grid-row: 1; justify-self: center; }
 .site-header .brand { grid-column: 3; grid-row: 1; justify-self: end; }
 
@@ -1011,6 +1023,8 @@ html.js .reveal.visible { opacity: 1; transform: none; }
     padding: 8px 0;
     gap: 0;
   }
+
+  .nav-portrait { display: none; }
 
   .burger {
     position: static;
