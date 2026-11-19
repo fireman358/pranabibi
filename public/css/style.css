@@ -1356,54 +1356,52 @@ body.has-promo .hero { padding-top: 48px; }
 .promo-bar.compact .btn { display: none; }
 .promo-bar.compact .promo-compact-link { display: inline; }
 
-/* Ruban bon cadeau — coin supérieur gauche, triangle vide */
+/* Ruban bon cadeau — ruban de coin, 4 coins sur les bords */
 
 .gift-ribbon {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 55;
   width: 620px;
   height: 620px;
-  overflow: hidden;
-  z-index: 55;
   pointer-events: none;
+  transform-origin: top left;
+  transition: transform .35s var(--ease);
+}
+.gift-ribbon-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.gift-ribbon-svg polygon {
+  fill: var(--bordeaux);
+  stroke: var(--gold);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
 }
 .gift-ribbon-link {
   position: absolute;
-  left: 0;
-  top: 320px;
-  width: 453px;
-  height: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0 2px;
-  transform: rotate(-45deg);
-  transform-origin: top left;
-  background: var(--bordeaux);
-  border-top: 2px solid var(--gold);
-  border-bottom: 2px solid var(--gold);
-  color: var(--parchment);
-  text-decoration: none;
+  inset: 0;
+  display: block;
+  clip-path: polygon(0 260px, 260px 0, 387px 0, 0 387px);
   pointer-events: auto;
-  box-shadow: 0 18px 50px rgba(0, 0, 0, .28);
-  transition: top .35s var(--ease), width .35s var(--ease), height .35s var(--ease);
 }
 .gift-ribbon-title {
+  position: absolute;
+  left: 95px;
+  top: 198px;
+  transform: rotate(-45deg);
+  transform-origin: left center;
   font-family: var(--font-title);
   font-size: 38px;
   line-height: 1.05;
-  text-align: center;
   color: var(--gold-light);
-  transition: font-size .35s var(--ease);
+  white-space: nowrap;
 }
-.gift-ribbon-link:hover .gift-ribbon-title { color: var(--parchment); }
-.gift-ribbon-link.compact {
-  top: 220px;
-  width: 311px;
-  height: 64px;
-}
-.gift-ribbon-link.compact .gift-ribbon-title { font-size: 26px; }
+.gift-ribbon.compact { transform: scale(.7); }
 
 /* Add-on */
 

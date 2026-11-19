@@ -96,7 +96,7 @@
   }
 
   /* Ruban bon cadeau : rétrécit au scroll */
-  var ribbon = document.querySelector('.gift-ribbon-link');
+  var ribbon = document.querySelector('.gift-ribbon');
   if (ribbon) {
     var onRibbonScroll = function () {
       ribbon.classList.toggle('compact', window.scrollY > 120);
