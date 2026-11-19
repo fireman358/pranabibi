@@ -59,6 +59,42 @@
     items.forEach(function (el) { observer.observe(el); });
   }
 
+  /* Téléphone masqué : le numéro est construit au clic */
+  document.querySelectorAll('.reveal-tel').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var a = document.createElement('a');
+      a.href = 'tel:' + ['+32', '493', '82', '83', '31'].join('');
+      a.textContent = ['0493', '82', '83', '31'].join(' ');
+      btn.replaceWith(a);
+    });
+  });
+
+  /* WhatsApp : lien construit au clic, numéro absent du HTML */
+  var wa = document.querySelector('.social-wa');
+  if (wa) {
+    wa.addEventListener('click', function () {
+      var n = ['32', '493', '82', '83', '31'].join('');
+      window.open('https://wa.me/' + n, '_blank', 'noopener');
+    });
+  }
+
+  /* Bandeau -20 % : compact au scroll, fermable */
+  var promo = document.getElementById('promo-bar');
+  if (promo) {
+    var onPromoScroll = function () {
+      promo.classList.toggle('compact', window.scrollY > 120);
+    };
+    window.addEventListener('scroll', onPromoScroll, { passive: true });
+    onPromoScroll();
+
+    var promoClose = promo.querySelector('.promo-close');
+    if (promoClose) {
+      promoClose.addEventListener('click', function () {
+        promo.hidden = true;
+      });
+    }
+  }
+
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 })();
