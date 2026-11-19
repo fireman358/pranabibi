@@ -1361,25 +1361,23 @@ body.has-promo .hero { padding-top: 48px; }
 .gift-ribbon {
   position: fixed;
   left: 0;
-  top: 169px;
+  top: 55%;
   z-index: 55;
-  width: 800px;
-  height: 600px;
-  overflow: visible;
+  width: 0;
+  height: 0;
   pointer-events: none;
 }
 .gift-ribbon-link {
   position: absolute;
-  left: -120px;
-  top: 30px;
-  width: 600px;
+  left: 0;
+  top: 0;
+  width: 480px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 4px;
-  padding: 24px 0 28px;
-  transform: rotate(45deg);
-  transform-origin: center;
+  justify-content: center;
+  padding: 20px 0 22px;
+  transform: rotate(-45deg);
+  transform-origin: left center;
   background: var(--bordeaux);
   border-top: 2px solid var(--gold);
   border-bottom: 2px solid var(--gold);
@@ -1387,21 +1385,22 @@ body.has-promo .hero { padding-top: 48px; }
   text-decoration: none;
   pointer-events: auto;
   box-shadow: 0 18px 50px rgba(0, 0, 0, .28);
-}
-.gift-ribbon-kicker {
-  font-family: var(--font-caps);
-  font-size: 28px;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: var(--gold);
+  transition: width .35s var(--ease), padding .35s var(--ease);
 }
 .gift-ribbon-title {
   font-family: var(--font-title);
-  font-size: 64px;
-  line-height: 1;
+  font-size: 44px;
+  line-height: 1.05;
+  text-align: center;
   color: var(--gold-light);
+  transition: font-size .35s var(--ease);
 }
 .gift-ribbon-link:hover .gift-ribbon-title { color: var(--parchment); }
+.gift-ribbon-link.compact {
+  width: 300px;
+  padding: 12px 0 14px;
+}
+.gift-ribbon-link.compact .gift-ribbon-title { font-size: 26px; }
 
 /* Add-on */
 
@@ -1431,10 +1430,11 @@ body.has-promo .hero { padding-top: 48px; }
   .promo-bar p { font-size: 12.5px; }
   .promo-bar .btn { padding: 7px 12px; }
   .promo-bar.compact { padding: 8px 16px; }
-  .gift-ribbon { top: 173px; width: 100vw; height: 420px; }
-  .gift-ribbon-link { left: -90px; top: 14px; width: 260px; padding: 12px 0 14px; gap: 2px; }
-  .gift-ribbon-kicker { font-size: 11px; letter-spacing: .14em; }
-  .gift-ribbon-title { font-size: 28px; }
+  .gift-ribbon { top: auto; bottom: 0; }
+  .gift-ribbon-link { top: auto; bottom: 6px; left: 0; width: 110px; padding: 8px 0 9px; }
+  .gift-ribbon-title { font-size: 12px; }
+  .gift-ribbon-link.compact { width: 90px; padding: 6px 0 7px; }
+  .gift-ribbon-link.compact .gift-ribbon-title { font-size: 10px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

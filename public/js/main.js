@@ -95,6 +95,16 @@
     }
   }
 
+  /* Ruban bon cadeau : rétrécit au scroll */
+  var ribbon = document.querySelector('.gift-ribbon-link');
+  if (ribbon) {
+    var onRibbonScroll = function () {
+      ribbon.classList.toggle('compact', window.scrollY > 120);
+    };
+    window.addEventListener('scroll', onRibbonScroll, { passive: true });
+    onRibbonScroll();
+  }
+
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 })();
