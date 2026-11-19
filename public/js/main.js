@@ -80,7 +80,7 @@
 
   /* Bandeau -20 % : compact au scroll, fermable */
   var promo = document.getElementById('promo-bar');
-  if (promo) {
+  if (promo && !promo.closest('.site-header')) {
     var onPromoScroll = function () {
       promo.classList.toggle('compact', window.scrollY > 120);
     };
@@ -103,6 +103,18 @@
     };
     window.addEventListener('scroll', onRibbonScroll, { passive: true });
     onRibbonScroll();
+  }
+
+  /* Hauteur réelle du header (bandeau inclus) -> variable CSS --header-h */
+  var header = document.querySelector('.site-header');
+  if (header) {
+    var syncHeader = function () {
+      document.documentElement.style.setProperty('--header-h', header.offsetHeight + 'px');
+    };
+    if (window.ResizeObserver) { new ResizeObserver(syncHeader).observe(header); }
+    window.addEventListener('resize', syncHeader);
+    window.addEventListener('load', syncHeader);
+    syncHeader();
   }
 
   /* Bulle de définition au survol des termes de massage */
