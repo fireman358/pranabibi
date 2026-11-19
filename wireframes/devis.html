@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Devis — Site vitrine PranaBibi</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: #2e2a2a;
+    background: #eceae7;
+    padding: 28px 14px 60px;
+    line-height: 1.5;
+  }
+  .page {
+    max-width: 880px; margin: 0 auto;
+    background: #fff; border: 1px solid #ddd; border-radius: 6px;
+    padding: 44px 52px;
+  }
+  @media print { body { background: #fff; padding: 0; } .page { border: none; padding: 10px; } .no-print { display: none; } }
+
+  .doc-head { display: flex; justify-content: space-between; gap: 24px; margin-bottom: 8px; }
+  .doc-head h1 { font-size: 26px; letter-spacing: 3px; }
+  .doc-head .doc-meta { text-align: right; font-size: 13px; color: #666; }
+  .doc-sub { color: #999; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 26px; }
+
+  .parties { display: flex; gap: 28px; margin-bottom: 30px; font-size: 13px; }
+  .parties > div { flex: 1; background: #f7f5f2; border-radius: 4px; padding: 14px 16px; }
+  .parties h3 { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #8a7f76; margin-bottom: 6px; }
+  .parties .fill { color: #b5aaa0; font-style: italic; }
+
+  h2 { font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: #7a4a3a; border-bottom: 2px solid #7a4a3a; padding-bottom: 4px; margin: 30px 0 14px; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #8a7f76; padding: 6px 8px; border-bottom: 1px solid #ccc; }
+  td { padding: 7px 8px; border-bottom: 1px solid #eee; vertical-align: top; }
+  td.desc b { color: #4a3f36; }
+  td.desc .sub { color: #888; font-size: 12px; display: block; margin-top: 2px; }
+
+  .total-row td { border-top: 2px solid #7a4a3a; border-bottom: none; padding-top: 10px; font-size: 15px; font-weight: 600; }
+
+  .cards { display: flex; gap: 16px; margin-top: 6px; }
+  .card { flex: 1; border: 1.5px solid #d8cfc7; border-radius: 6px; padding: 16px 18px; font-size: 13px; background: #fdfcfb; }
+  .card h4 { font-size: 13px; margin-bottom: 8px; color: #4a3f36; }
+  .card .big { font-size: 21px; font-weight: 700; color: #7a4a3a; margin: 6px 0 2px; }
+  .card ul { margin: 8px 0 0 16px; color: #555; }
+  .card li { margin-bottom: 4px; }
+  .card .tag { display: inline-block; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; background: #efe8e0; color: #7a4a3a; padding: 2px 8px; border-radius: 10px; margin-bottom: 8px; }
+
+  .explication { background: #f7f5f2; border-radius: 4px; padding: 16px 18px; font-size: 13px; margin-top: 14px; }
+  .explication p { margin-bottom: 8px; }
+  .explication b { color: #7a4a3a; }
+
+  .footnote { font-size: 11.5px; color: #999; margin-top: 26px; }
+  .signatures { display: flex; gap: 40px; margin-top: 44px; }
+  .signatures > div { flex: 1; font-size: 12px; color: #666; }
+  .sig-line { border-bottom: 1px solid #999; height: 40px; margin-bottom: 6px; }
+
+  .opt { background: #fff; border: 1.5px dashed #c9bfb4; border-radius: 6px; padding: 14px 18px; font-size: 13px; margin-top: 10px; }
+  .opt h4 { font-size: 12.5px; margin-bottom: 4px; }
+  @media print { .opt { page-break-inside: avoid; } .page { max-width: none; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="doc-head">
+    <div>
+      <h1>DEVIS</h1>
+      <div style="color:#999;font-size:13px;">Création d'un site vitrine professionnel</div>
+    </div>
+    <div class="doc-meta">
+      Devis n° <b>2026-001</b><br>
+      Date : <span class="fill">___ / ___ / 2026</span><br>
+      Validité : 30 jours
+    </div>
+  </div>
+  <div class="doc-sub">Institut de beauté — épilations, massages &amp; cils · Arquennes (Seneffe)</div>
+
+  <div class="parties">
+    <div>
+      <h3>Prestataire</h3>
+      <b>[Ton nom]</b><br>
+      Indépendant — création de sites web<br>
+      <span class="fill">Adresse · Tel · Email</span><br>
+      <span class="fill">N° entreprise · Statut TVA : à compléter</span>
+    </div>
+    <div>
+      <h3>Cliente</h3>
+      <b>PranaBibi</b><br>
+      <span class="fill">Nom · Adresse de l'institut</span><br>
+      <span class="fill">Tel · Email</span><br>
+      <span class="fill">N° entreprise · Statut TVA : à compléter</span>
+    </div>
+  </div>
+
+  <h2>Périmètre — livrables détaillés</h2>
+  <table>
+    <tr><th style="width:34%;">Livrable</th><th>Détail</th><th style="width:16%; text-align:right;">Prix</th></tr>
+    <tr>
+      <td class="desc"><b>Conception graphique</b><span class="sub">Direction artistique</span></td>
+      <td>Charte graphique dérivée de la carte de visite : palette, sceau, typographies, ton visuel. Maquette validée avant développement.</td>
+      <td style="text-align:right;">inclus</td>
+    </tr>
+    <tr>
+      <td class="desc"><b>6 pages web</b><span class="sub">Design responsive</span></td>
+      <td>Accueil, Épilations, Massages, Extensions de cils, Tarifs, FAQ. Adapté mobile, tablette et ordinateur.</td>
+      <td style="text-align:right;">inclus</td>
+    </tr>
+    <tr>
+      <td class="desc"><b>Page légale</b></td>
+      <td>Mentions légales conformes (RGPD, loi belge sur les pratiques du marché électronique).</td>
+      <td style="text-align:right;">inclus</td>
+    </tr>
+    <tr>
+      <td class="desc"><b>Référencement (SEO)</b><span class="sub">Base technique</span></td>
+      <td>Balises, données structurées (fiche locale Google), sitemap, robots.txt, indexation locale « Arquennes / Seneffe ».</td>
+      <td style="text-align:right;">inclus</td>
+    </tr>
+    <tr>
+      <td class="desc"><b>Hébergement &amp; nom de domaine</b></td>
+      <td>Mise en ligne sur infrastructure Cloudflare (rapide, sécurisée, HTTPS), rattachement du domaine <i>pranabibi.com</i> (domaine non inclus, environ 15 €/an à son nom).</td>
+      <td style="text-align:right;">inclus</td>
+    </tr>
+    <tr>
+      <td class="desc"><b>Formation &amp; remise</b></td>
+      <td>Remise des accès, explication du fonctionnement, 1 séance de questions/réponses.</td>
+      <td style="text-align:right;">inclus</td>
+    </tr>
+    <tr>
+      <td class="desc"><b>Itérations</b></td>
+      <td>2 tours de retours sur textes et mises en page après livraison de la maquette validée.</td>
+      <td style="text-align:right;">inclus</td>
+    </tr>
+    <tr class="total-row">
+      <td colspan="2">Total prestation</td>
+      <td style="text-align:right;">500,00 €</td>
+    </tr>
+  </table>
+  <p class="footnote">Tarif de lancement réservé au premier client, valable pour ce périmètre précis. Toute option ou ajout fera l'objet d'un devis complémentaire. Textes et photos professionnelles fournis par la cliente (mise en page et intégration incluses).</p>
+
+  <h2>Prix — selon le statut TVA de chacun</h2>
+
+  <div class="cards">
+    <div class="card">
+      <span class="tag">Scénario A</span>
+      <h4>Je suis en régime de franchise<br>(CA &lt; 25 000 €/an)</h4>
+      <div class="big">500,00 € TVAC</div>
+      TVA non applicable — mention « non assujetti » figurera sur la facture.<br>
+      <b>Avantage cliente :</b> aucun centime de TVA, contrairement à une agence.
+      <ul>
+        <li>Tarif client affiché : <b>500 €</b></li>
+        <li>Coût réel pour elle : <b>500 €</b></li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="tag">Scénario B</span>
+      <h4>Je suis assujetti TVA<br>(TVA à facturer, 21 %)</h4>
+      <div class="big">500,00 € HTVA</div>
+      soit <b>605,00 € TVAC</b> — TVA reversée à l'État belge.
+      <ul>
+        <li>Tarif client affiché : <b>605 € TVAC</b></li>
+        <li>Si la cliente est <b>elle-même assujettie</b> : elle récupère la TVA → coût réel ≈ <b>500 €</b> (et les 500 € HTVA sont une charge déductible)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="explication">
+    <p><b>Pourquoi deux scénarios ?</b> La TVA n'est pas un revenu du prestataire : si elle est facturée, elle est intégralement reversée à l'État. Le prix « juste » du travail est donc toujours de <b>500 € pour la prestation</b> ; la différence d'affichage ne dépend que du régime TVA du prestataire.</p>
+    <p><b>Côté cliente :</b> une indépendante assujettie (pas en franchise) récupère la TVA payée sur ses achats professionnels via sa déclaration TVA et déduit la charge de son bénéfice imposable — le site lui revient en réalité à <b>environ 350–400 €</b>. Une cliente en franchise, elle, ne récupère pas la TVA : le scénario A (pas de TVA) lui est donc financièrement équivalent, voire plus simple.</p>
+    <p class="no-print"><b>Note :</b> le scénario applicable figure clairement sur la facture finale ; ce devis présente les deux pour transparence.</p>
+  </div>
+
+  <h2>Pour comparaison</h2>
+  <table>
+    <tr><th>Prestataire</th><th style="text-align:right;">Ordre de prix (indicatif)</th></tr>
+    <tr><td>Agence web belge — site vitrine équivalent (6 pages, SEO, mise en ligne)</td><td style="text-align:right;">1 500 – 3 000 € TVAC</td></tr>
+    <tr><td>Freelance web (45–75 €/h × 15–20 h de travail équivalent)</td><td style="text-align:right;">700 – 1 500 €</td></tr>
+    <tr><td><b>Ce devis — tarif de lancement</b></td><td style="text-align:right;"><b>500 € (HTVA ou TVAC selon statut)</b></td></tr>
+  </table>
+
+  <h2>Option — maintenance (à discuter)</h2>
+  <div class="opt">
+    <h4>Suivi mensuel : 35,00 €/mois (ou 350,00 €/an)</h4>
+    Modifications mineures (tarifs, horaires, textes), surveillance de la disponibilité et du HTTPS, petites mises à jour, sauvegarde du contenu, support par email. Sans engagement, résiliable à tout moment en fin de mois. Les modifications importantes (nouvelle page, nouvelle fonctionnalité) font l'objet d'un devis séparé.
+  </div>
+
+  <h2>Conditions</h2>
+  <table>
+    <tr><td>Délai de livraison</td><td>2 semaines après réception des contenus (textes, photos, logo haute définition)</td></tr>
+    <tr><td>Acompte</td><td>50 % à la signature, solde à la livraison</td></tr>
+    <tr><td>Propriété</td><td>Le site et son contenu deviennent la pleine propriété de la cliente après paiement intégral</td></tr>
+    <tr><td>Résiliation avant livraison</td><td>L'acompte couvre le travail réalisé (maquette validée = 50 % du travail)</td></tr>
+  </table>
+
+  <h2>Bon pour accord</h2>
+  <div class="signatures">
+    <div>
+      <div class="sig-line"></div>
+      Le prestataire — date &amp; signature
+    </div>
+    <div>
+      <div class="sig-line"></div>
+      La cliente (lu et approuvé) — date &amp; signature
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
