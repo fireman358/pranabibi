@@ -122,3 +122,28 @@ autodiscover          3600 IN CNAME mailconfig.ovh.net.
 - **Apex / www** : ne pas recopier les enregistrements Wix. Attacher pranabibi.com en *custom domain* du Worker (Cloudflare cree l'enregistrement), et faire une Redirect Rule www.pranabibi.com/* -> https://pranabibi.com/ (301).
 - **Ne pas activer Email Routing** : cela remplacerait les MX OVH.
 - Abaisser les TTL a 300 quelques jours avant, puis changer les NS chez OVH.
+
+
+---
+
+## 5. Reprise du site par la cliente (transfert Cloudflare -> compte a elle)
+
+Le site est heberge sur le compte Cloudflare de l'hebergeur pour accelerer la mise en production. Le jour de la reprise, tout est reversible en ~30 min, sans coupure si on prepare la cible avant.
+
+**Principe** : une zone Cloudflare ne se "transfere" pas d'un compte a l'autre. On **recree la zone** dans le compte de la cliente, on verifie les enregistrements, puis on change les nameservers chez OVH.
+
+### Etapes
+
+1. **Compte a elle** : creer un compte Cloudflare gratuit, *Add a site* -> `pranabibi.com`, plan Free.
+2. **Verifier l'import** : MX (`mx1/mx2/mx3.mail.ovh.net`), TXT SPF (`v=spf1 include:mx.ovh.com -all`), CNAME `autodiscover` -> `mailconfig.ovh.net`, DKIM eventuel. Cloudflare importe generalement la zone existante : controler ligne par ligne.
+3. **Ne pas activer Email Routing** (il remplacerait les MX OVH).
+4. **Le Worker doit etre dans le meme compte que la zone** : redeployer le site dans son compte (`wrangler deploy` avec un token de son compte, ou connexion du repo GitHub a son compte), et attacher `pranabibi.com` en custom domain.
+5. **Changer les nameservers chez OVH** vers les 2 NS fournis par son compte (propagation : quelques minutes a 48 h).
+6. **Verifier** : site, HTTPS, mail (envoi + reception), redirections.
+7. **Nettoyer** : supprimer la zone dans l'ancien compte (elle apparaitra comme "moved"), retirer les acces temporaires.
+
+### Points de vigilance
+
+- Tester la **reception ET l'envoi** du mail avant et apres le changement de NS.
+- La zone cible doit etre prete **avant** le changement de NS (sinon coupure DNS).
+- Les Redirect Rules (301 Wix, www) sont a recreer dans le nouveau compte : garder la liste dans le repo.
