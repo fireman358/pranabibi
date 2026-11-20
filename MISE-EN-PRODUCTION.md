@@ -147,3 +147,17 @@ Le site est heberge sur le compte Cloudflare de l'hebergeur pour accelerer la mi
 - Tester la **reception ET l'envoi** du mail avant et apres le changement de NS.
 - La zone cible doit etre prete **avant** le changement de NS (sinon coupure DNS).
 - Les Redirect Rules (301 Wix, www) sont a recreer dans le nouveau compte : garder la liste dans le repo.
+
+
+---
+
+## 6. Etat de production (20/11/2026)
+
+- **Site en ligne** : https://pranabibi.com (apex) et https://www.pranabibi.com, servis par **Cloudflare Workers** (assets statiques), deploiement automatique depuis GitHub `fireman358/pranabibi`, branche `main`.
+- **DNS** : zone `pranabibi.com` chez Cloudflare (NS `lennon.ns.cloudflare.com` / `nucum.ns.cloudflare.com`). Le domaine reste enregistre chez OVH (echeance 09/06/2027, renouvellement auto).
+- **Mail** : inchange, chez OVH (MX `mx1/mx2/mx3.mail.ovh.net`, SPF, `autodiscover`, `imap`, `smtp` en DNS only). **Ne pas activer Email Routing** dans Cloudflare.
+- **Analytics** : Cloudflare Web Analytics (snippet dans les 8 pages, CSP mise a jour pour `static.cloudflareinsights.com`).
+- **Anciennes URLs Wix** : 301 geres par `_redirects` (Workers Static Assets) — verifies en production.
+- **Wix** : abonnement resilie (renouvellement stoppe), service actif jusqu'a l'echeance 2027 ; le domaine ne pointe plus dessus, l'ancien site n'est donc plus accessible.
+- **Publier une modification** : `git push` sur `main` -> build Cloudflare -> deploy (~1 min). Verifier que le build est vert dans *Workers & Pages > pranabibi > Deploiements*.
+- **Pieges** : le dossier `/brand/*` est mis en cache 7 jours par le CDN -> versionner l'URL de toute image modifiee (`?v=...`). Un enregistrement DNS supprime puis recree laisse un cache negatif (30 min) chez certains resolveurs publics.
