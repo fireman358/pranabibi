@@ -1,6 +1,4 @@
-# MAQUETTE — indexation désactivée. Retirer la ligne X-Robots-Tag en production.
 /*
-  X-Robots-Tag: noindex, nofollow
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=()
