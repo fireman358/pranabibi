@@ -153,7 +153,6 @@ h1, h2, h3, h4 {
   z-index: 50;
   background: rgba(42, 10, 6, .97);
   border-bottom: 1px solid rgba(201, 157, 82, .32);
-  backdrop-filter: blur(10px);
 }
 
 .site-header .wrap {
@@ -1376,6 +1375,7 @@ body.has-promo .hero { padding-top: 48px; min-height: calc(100svh - var(--header
   color: var(--parchment);
   border-bottom: 1px solid var(--gold);
   box-shadow: 0 10px 30px rgba(0, 0, 0, .18);
+  transform: translateZ(0);
   transition: padding .3s var(--ease), width .3s var(--ease), border-radius .3s var(--ease), margin .3s var(--ease);
 }
 .promo-bar p { margin: 0; font-size: 14px; }

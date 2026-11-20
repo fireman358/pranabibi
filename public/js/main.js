@@ -82,7 +82,10 @@
   var promo = document.getElementById('promo-bar');
   if (promo) {
     var onPromoScroll = function () {
-      promo.classList.toggle('compact', window.scrollY > 120);
+      var y = window.scrollY;
+      var isCompact = promo.classList.contains('compact');
+      if (!isCompact && y > 160) { promo.classList.add('compact'); }
+      else if (isCompact && y < 80) { promo.classList.remove('compact'); }
     };
     window.addEventListener('scroll', onPromoScroll, { passive: true });
     onPromoScroll();
@@ -99,7 +102,10 @@
   var ribbon = document.querySelector('.gift-ribbon');
   if (ribbon) {
     var onRibbonScroll = function () {
-      ribbon.classList.toggle('compact', window.scrollY > 120);
+      var y = window.scrollY;
+      var isCompact = ribbon.classList.contains('compact');
+      if (!isCompact && y > 160) { ribbon.classList.add('compact'); }
+      else if (isCompact && y < 80) { ribbon.classList.remove('compact'); }
     };
     window.addEventListener('scroll', onRibbonScroll, { passive: true });
     onRibbonScroll();
