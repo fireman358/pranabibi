@@ -153,7 +153,8 @@ Le site est heberge sur le compte Cloudflare de l'hebergeur pour accelerer la mi
 
 ## 6. Etat de production (20/11/2026)
 
-- **Site en ligne** : https://pranabibi.com (apex) et https://www.pranabibi.com, servis par **Cloudflare Workers** (assets statiques), deploiement automatique depuis GitHub `fireman358/pranabibi`, branche `main`.
+- **Site en ligne** : https://pranabibi.com (apex), servi par **Cloudflare Workers** (assets statiques), deploiement automatique depuis GitHub `fireman358/pranabibi`, branche `main`.
+- **`www`** : CNAME `www` -> `pranabibi.com` (proxied) + Redirect Rule 301 `www.pranabibi.com/*` -> `https://pranabibi.com/$1` (chaine de requete conservee).
 - **DNS** : zone `pranabibi.com` chez Cloudflare (NS `lennon.ns.cloudflare.com` / `nucum.ns.cloudflare.com`). Le domaine reste enregistre chez OVH (echeance 09/06/2027, renouvellement auto).
 - **Mail** : inchange, chez OVH (MX `mx1/mx2/mx3.mail.ovh.net`, SPF, `autodiscover`, `imap`, `smtp` en DNS only). **Ne pas activer Email Routing** dans Cloudflare.
 - **Analytics** : Cloudflare Web Analytics (snippet dans les 8 pages, CSP mise a jour pour `static.cloudflareinsights.com`).
