@@ -88,3 +88,37 @@ Le Worker et la zone DNS doivent être **dans le même compte Cloudflare** pour 
 - Un **e-mail PranaBibi dédié** (ne pas utiliser `@lovelysecret.be`, branche VDI distincte).
 - La confirmation des prix/forfaits et des horaires.
 - Les photos définitives + credit photographe (`Phil.G_Photography` pour le portrait actuel).
+
+
+---
+
+## 4. Etat DNS observe le 20/11/2026 (avant bascule)
+
+Releve public sur pranabibi.com (a re-verifier dans le manager OVH le jour J) :
+
+| Type | Nom | Valeur | TTL |
+|---|---|---|---|
+| NS | apex | dns200.anycast.me, 
+s200.anycast.me (OVH) | - |
+| A | apex | 185.230.63.107 (Wix) | 3600 |
+| CNAME | www | pointing.wixdns.net (Wix) | 3600 |
+| MX | apex | mx1.mail.ovh.net (1), mx2 (5), mx3 (100) | 3600 |
+| TXT | apex | =spf1 include:mx.ovh.com -all | 3600 |
+| TXT | apex | 1|www.pranabibi.com (verification Wix, a supprimer apres) | 3600 |
+| CNAME | utodiscover | mailconfig.ovh.net | 3600 |
+
+Pas de DKIM trouve sur les selecteurs usuels (default, selector1, mail, ovh...) : a verifier dans l'espace client OVH (Mail / MX Plan) avant de changer les NS.
+
+### Enregistrements a recreer dans Cloudflare (hors site)
+
+`zone
+pranabibi.com.        3600 IN MX    1   mx1.mail.ovh.net.
+pranabibi.com.        3600 IN MX    5   mx2.mail.ovh.net.
+pranabibi.com.        3600 IN MX    100 mx3.mail.ovh.net.
+pranabibi.com.        3600 IN TXT   "v=spf1 include:mx.ovh.com -all"
+autodiscover          3600 IN CNAME mailconfig.ovh.net.
+`
+
+- **Apex / www** : ne pas recopier les enregistrements Wix. Attacher pranabibi.com en *custom domain* du Worker (Cloudflare cree l'enregistrement), et faire une Redirect Rule www.pranabibi.com/* -> https://pranabibi.com/ (301).
+- **Ne pas activer Email Routing** : cela remplacerait les MX OVH.
+- Abaisser les TTL a 300 quelques jours avant, puis changer les NS chez OVH.
