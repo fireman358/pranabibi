@@ -219,7 +219,7 @@ Guides OVH : [iPhone/iPad](https://docs.ovhcloud.com/fr/guides/web-cloud/email-a
 | Fichier | Modification |
 |---|---|
 | `public/index.html` (section Contact) | bouton **« Afficher l'e-mail »** sous le téléphone : l'adresse est construite en JS, jamais dans le HTML |
-| `public/mentions-legales.html` | renvoi « afficher l'adresse sur la page Contact » (comme le téléphone) |
+| `public/mentions-legales.html` | **adresse e-mail en clair** (obligation légale : loi du 11/03/2003, art. 7 §1er, 3°) + OVH et mesure d'audience |
 | `public/faq.html` | « par téléphone ou par e-mail » via la page Contact, sans adresse en clair |
 | `public/index.html` (JSON-LD `BeautySalon`) | **pas** de champ `email` : rien de machine-lisible dans le HTML |
 | `public/css/style.css` + `public/js/main.js` | styles du bouton et construction de l'adresse ; versions `v=20261121b` |

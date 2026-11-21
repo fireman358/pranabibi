@@ -7,7 +7,7 @@ Contexte : site **statique** sur Cloudflare Worker (pas de CMS, pas de formulair
 - Aucun formulaire, aucun login, aucune base de données : pas d'injection, pas de mot de passe à voler côté site.
 - En-têtes de sécurité : CSP, HSTS, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`, `X-Frame-Options`, COOP/CORP.
 - Numéro de téléphone **absent du HTML** : il est reconstruit au clic (bouton « Afficher le numéro ») et le lien WhatsApp est construit en JavaScript. Les robots qui ne lisent que le HTML ne le trouvent plus.
-- **E-mail `contact@pranabibi.com` absent du HTML** : il est construit en JavaScript au clic (bouton « Afficher l'e-mail »), exactement comme le téléphone. Il n'apparaît ni dans les pages, ni dans les mentions légales, ni dans le JSON-LD. Même limite que le téléphone : un robot qui exécute le JavaScript peut le reconstruire ; la vraie protection reste les filtres antispam.
+- **E-mail `contact@pranabibi.com`** : absent de la page Contact (construit en JavaScript au clic, comme le téléphone), mais **affiché en clair dans les mentions légales** — la loi du 11 mars 2003 (art. 7 §1er, 3°) impose une adresse e-mail directement accessible. Les robots la trouveront donc là : la vraie protection reste les filtres antispam. Le téléphone, lui, n'est pas repris en clair (l'e-mail suffit à satisfaire l'obligation).
 - JSON-LD sans `telephone` (choix assumé : moins de NAP dans le schema, la fiche Google Business Profile reste le canal principal).
 - Site en `noindex` pour la maquette ; le code est public sur GitHub (`fireman358/pranabibi`).
 
