@@ -701,12 +701,14 @@ nav .cta:hover { background: var(--gold); color: var(--espresso); }
 }
 .contact-card a:hover { color: var(--gold-light); }
 
+.contact-card .reveal-tel,
+.contact-card .reveal-mail,
+.contact-card a[href^="tel:"],
 .contact-card .contact-mail {
-  display: inline-block;
-  margin-top: 12px;
-  font-size: 18px;
-  word-break: break-word;
+  display: block;
+  margin: 0 auto 8px;
 }
+.contact-card .contact-mail { margin-bottom: 0; }
 .contact-card small {
   display: block;
   font-family: var(--font-body);
@@ -1277,9 +1279,10 @@ html:not(.js) .page-head { padding-top: 56px; }
 
 /* ---------- Remarques cliente : téléphone, lexique, cadeau, promo ---------- */
 
-a[href^="tel:"], .reveal-tel, nav .cta { white-space: nowrap; }
+a[href^="tel:"], .reveal-tel, .reveal-mail, nav .cta { white-space: nowrap; }
 
-.reveal-tel {
+.reveal-tel,
+.reveal-mail {
   background: none;
   border: 0;
   padding: 0;
@@ -1291,7 +1294,8 @@ a[href^="tel:"], .reveal-tel, nav .cta { white-space: nowrap; }
   color: var(--parchment);
   border-bottom: 1px solid var(--gold);
 }
-.reveal-tel:hover { color: var(--gold-light); }
+.reveal-tel:hover,
+.reveal-mail:hover { color: var(--gold-light); }
 
 .contact-socials button {
   background: none;

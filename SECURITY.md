@@ -7,7 +7,7 @@ Contexte : site **statique** sur Cloudflare Worker (pas de CMS, pas de formulair
 - Aucun formulaire, aucun login, aucune base de données : pas d'injection, pas de mot de passe à voler côté site.
 - En-têtes de sécurité : CSP, HSTS, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`, `X-Frame-Options`, COOP/CORP.
 - Numéro de téléphone **absent du HTML** : il est reconstruit au clic (bouton « Afficher le numéro ») et le lien WhatsApp est construit en JavaScript. Les robots qui ne lisent que le HTML ne le trouvent plus.
-- **Adresse e-mail `contact@pranabibi.com` publique depuis le 21/11/2026** (choix de la cliente, pour être joignable professionnellement) : c'est un canal volontairement exposé. Elle est dédiée à l'institut (jamais l'adresse personnelle, jamais Lovely Secret). Prévoir les filtres antispam et ne pas la multiplier sur le site.
+- **E-mail `contact@pranabibi.com` absent du HTML** : il est construit en JavaScript au clic (bouton « Afficher l'e-mail »), exactement comme le téléphone. Il n'apparaît ni dans les pages, ni dans les mentions légales, ni dans le JSON-LD. Même limite que le téléphone : un robot qui exécute le JavaScript peut le reconstruire ; la vraie protection reste les filtres antispam.
 - JSON-LD sans `telephone` (choix assumé : moins de NAP dans le schema, la fiche Google Business Profile reste le canal principal).
 - Site en `noindex` pour la maquette ; le code est public sur GitHub (`fireman358/pranabibi`).
 

@@ -69,6 +69,18 @@
     });
   });
 
+  /* E-mail masqué : l'adresse est construite au clic, jamais dans le HTML */
+  document.querySelectorAll('.reveal-mail').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var addr = ['contact', 'pranabibi.com'].join('@');
+      var a = document.createElement('a');
+      a.className = 'contact-mail';
+      a.href = 'mailto:' + addr;
+      a.textContent = addr;
+      btn.replaceWith(a);
+    });
+  });
+
   /* WhatsApp : lien construit au clic, numéro absent du HTML */
   var wa = document.querySelector('.social-wa');
   if (wa) {

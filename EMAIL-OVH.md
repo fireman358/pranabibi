@@ -218,11 +218,11 @@ Guides OVH : [iPhone/iPad](https://docs.ovhcloud.com/fr/guides/web-cloud/email-a
 
 | Fichier | Modification |
 |---|---|
-| `public/index.html` (section Contact) | adresse **sous le téléphone** dans la carte « Téléphone & e-mail » (`mailto:`) |
-| `public/mentions-legales.html` | ligne « E-mail : contact@pranabibi.com » |
-| `public/faq.html` | réponse « Faut-il réserver ? » + JSON-LD `FAQPage` |
-| `public/index.html` (JSON-LD `BeautySalon`) | `"email": "contact@pranabibi.com"` |
-| `public/css/style.css` | règle `.contact-mail` ; version passée en `v=20261121a` sur les 8 pages |
+| `public/index.html` (section Contact) | bouton **« Afficher l'e-mail »** sous le téléphone : l'adresse est construite en JS, jamais dans le HTML |
+| `public/mentions-legales.html` | renvoi « afficher l'adresse sur la page Contact » (comme le téléphone) |
+| `public/faq.html` | « par téléphone ou par e-mail » via la page Contact, sans adresse en clair |
+| `public/index.html` (JSON-LD `BeautySalon`) | **pas** de champ `email` : rien de machine-lisible dans le HTML |
+| `public/css/style.css` + `public/js/main.js` | styles du bouton et construction de l'adresse ; versions `v=20261121b` |
 | `public/_headers` | inchangé (`mailto:` n'est pas concerné par la CSP) |
 
 Points d'attention :
