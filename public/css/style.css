@@ -700,6 +700,13 @@ nav .cta:hover { background: var(--gold); color: var(--espresso); }
   text-decoration: none;
 }
 .contact-card a:hover { color: var(--gold-light); }
+
+.contact-card .contact-mail {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 18px;
+  word-break: break-word;
+}
 .contact-card small {
   display: block;
   font-family: var(--font-body);
