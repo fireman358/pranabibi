@@ -2,7 +2,7 @@
 
 Objectif : créer une adresse **`contact@pranabibi.com`** qui reçoit et envoie, puis la brancher
 proprement sur le domaine dont le DNS est chez **Cloudflare** et le mail chez **OVHcloud**.
-L'adresse sera ajoutée au site dans un second temps (voir § 8).
+L'adresse est créée, testée et intégrée au site (voir § 6 et § 8).
 
 ## 0. Ce qu'on sait de son compte (relevé du 20/11/2026)
 
@@ -40,10 +40,10 @@ L'adresse sera ajoutée au site dans un second temps (voir § 8).
 4. Une fois connecté : **Paramètres du compte → Sécurité** → activer la double authentification,
    vérifier le téléphone et l'e-mail de secours.
 
-## 2. État confirmé : le MX Plan existe, la boîte reste à créer
+## 2. État confirmé : MX Plan actif, boîte créée
 
-Capture de la console du 20/11/2026 : service **MX Plan**, infrastructure `MXPLAN 1 hosting`,
-webmail **Roundcube**, **0 / 1 compte** configuré, **1 / 1000 redirection**, et
+Relevé de la console des 20 et 21/11/2026 : service **MX Plan**, infrastructure `MXPLAN 1 hosting`,
+webmail **Roundcube**, **1 / 1 compte** configuré (`contact@`), **1 / 1000 redirection**, et
 « Domaine à configurer : votre domaine est correctement configuré » (MX/SPF/DKIM vus par OVH).
 
 **La seule redirection (relevé du 20/11, repointée le 21/11/2026)** : `postmaster@pranabibi.com` →
@@ -54,9 +54,8 @@ webmail **Roundcube**, **0 / 1 compte** configuré, **1 / 1000 redirection**, et
 - La cible d'origine était un **Gmail lié à Lovely Secret**, l'ancienne activité de la cliente. Rien à
   voir avec le positionnement actuel (institut de beauté & massages).
 - **Elle ne bloque pas `contact@`** : les deux noms sont différents, la boîte peut être créée sans conflit.
-- **Repointage fait le 21/11/2026** : elle pointe désormais vers `contact@pranabibi.com`. Vérifier que
-  la boîte `contact@` **existe réellement** — sinon la redirection pointe dans le vide et les messages
-  à `postmaster@` rebondissent.
+- **Repointage fait le 21/11/2026** : elle pointe vers `contact@pranabibi.com`, et la boîte existe
+  bien (1 / 1) : la redirection est valide.
 
 > **À qui attribuer `postmaster@` ?** Ce n'est **pas** une boîte personnelle : c'est l'adresse de rôle
 > normalisée (RFC 5321) par laquelle un domaine accepte les messages techniques (erreurs de remise,
@@ -151,11 +150,10 @@ de signature), et il manque aussi **DMARC**.
    **« Activer DKIM »** (30 min à 24 h).
 5. Contrôle : `ovhmo-selector-1._domainkey.pranabibi.com` doit renvoyer un TXT `v=DKIM1; k=rsa; p=…`.
 
-**DMARC** : créer dans Cloudflare un TXT `_dmarc` avec la valeur ci-dessus (surveillance, `p=none`).
-Après 2–3 semaines sans faux positif, durcir en `p=quarantine; adkim=s; aspf=s; pct=100`.
-
-**DMARC** : créer dans Cloudflare un TXT `_dmarc` avec la valeur ci-dessus (surveillance, `p=none`).
-Après 2–3 semaines sans faux positif, durcir en `p=quarantine; adkim=s; aspf=s; pct=100`.
+**DMARC** : créé dans Cloudflare le 21/11 — TXT `_dmarc` :
+`v=DMARC1; p=none; rua=mailto:contact@pranabibi.com; adkim=r; aspf=r; pct=100`.
+Mode surveillance ; après 2–3 semaines sans faux positif, durcir en
+`p=quarantine; adkim=s; aspf=s; pct=100`.
 
 **Ce qu'il ne faut pas toucher** : les enregistrements `A`/`AAAA`/`CNAME` du site (`@`, `www`),
 ils pointent vers le Worker Cloudflare. Et **ne pas activer Email Routing**.
@@ -216,32 +214,27 @@ Guides OVH : [iPhone/iPad](https://docs.ovhcloud.com/fr/guides/web-cloud/email-a
 - **Sécurité** : 2FA sur le compte OVH, mot de passe unique, vérifier qu'aucune **règle de transfert**
   ou délégation inconnue n'existe, et que le téléphone de récupération est le bon.
 
-## 8. Quand on l'ajoutera au site (étape suivante)
-
-À faire seulement quand la boîte fonctionne (test § 6). Emplacements :
+## 8. Intégration au site (faite le 21/11/2026)
 
 | Fichier | Modification |
 |---|---|
-| `public/index.html` (section Contact) | carte « E-mail » avec `mailto:contact@pranabibi.com`, ou ligne sous le téléphone |
-| `public/mentions-legales.html` | ajouter « E-mail : contact@pranabibi.com » à côté du téléphone |
-| `public/faq.html` | mentionner l'e-mail comme canal possible |
-| `public/index.html` (JSON-LD `BeautySalon`) | ajouter `"email": "contact@pranabibi.com"` |
-| `public/_headers` | rien à changer (`mailto:` n'est pas concerné par la CSP) |
+| `public/index.html` (section Contact) | adresse **sous le téléphone** dans la carte « Téléphone & e-mail » (`mailto:`) |
+| `public/mentions-legales.html` | ligne « E-mail : contact@pranabibi.com » |
+| `public/faq.html` | réponse « Faut-il réserver ? » + JSON-LD `FAQPage` |
+| `public/index.html` (JSON-LD `BeautySalon`) | `"email": "contact@pranabibi.com"` |
+| `public/css/style.css` | règle `.contact-mail` ; version passée en `v=20261121a` sur les 8 pages |
+| `public/_headers` | inchangé (`mailto:` n'est pas concerné par la CSP) |
 
 Points d'attention :
 
-- Le téléphone a été volontairement masqué pour limiter le scraping. **Publier une adresse e-mail
-  exposera automatiquement la boîte aux robots** : prévoir les filtres antispam, et éventuellement
-  une adresse dédiée `contact@` (pas l'adresse personnelle de la cliente).
-- Ne pas mettre l'adresse en clair dans le JSON-LD **et** dans le texte si on veut limiter le spam :
-  aujourd'hui le choix du site est de ne pas exposer de contact direct. Décision à prendre avec elle.
-- Mettre à jour `SECURITY.md` (l'« aucune adresse e-mail exposée » ne sera plus vrai) et
-  `MODIFICATIONS.md` (nouvelle section datée).
+- Le téléphone reste masqué pour limiter le scraping. **L'adresse e-mail est désormais publique** :
+  prévoir les filtres antispam et ne pas multiplier les adresses sur le site.
+- `SECURITY.md` et `MODIFICATIONS.md` ont été mis à jour en conséquence.
 
 ## 9. Checklist
 
 - [ ] Accès à la console OVH récupéré, 2FA activée.
-- [x] Redirection `postmaster@` repointée vers `contact@` (21/11) — à confirmer une fois la boîte créée.
+- [x] Redirection `postmaster@` repointée vers `contact@` (21/11).
 - [x] `contact@pranabibi.com` créée, mot de passe fort enregistré.
 - [x] Webmail Roundcube accessible.
 - [x] Réception testée depuis un Gmail.
